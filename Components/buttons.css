@@ -1,0 +1,85 @@
+.button {
+  padding: var(--space-xs);
+  outline: none;
+  border: 0px solid transparent;
+  border-radius: 0.2rem;
+  font-family: 'Merriweather Sans', sans-serif;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.button-primary {
+  color: var(--white);
+  background: var(--primary);
+}
+.button-secondary{
+  color: var(--white);
+  background: var(--secondary);
+}
+.button-success {
+  color: var(--white);
+  background: var(--success);
+}
+.button-warning {
+  color: var(--black);
+  background: var(--warning);
+}
+.button-info {
+  color: var(--black);
+  background: var(--info);
+}
+.button-error {
+  color: var(--white);
+  background: var(--error);
+}
+.button-monochrome {
+  color: var(--white);
+  background: var(--dark);
+}
+
+.button-primary-outlined {
+  color: var(--primary);
+  border:1px solid var(--primary);
+    background-color: var(--background-secondary);
+}
+
+.button-secondary-outlined{
+    color: var(--secondary);
+    border:1px solid var(--secondary);
+    background-color: var(--background-primary);
+  }
+.button-success-outlined {
+  color: var(--success);
+  border:1px solid var(--success);
+    background-color: var(--background-primary);
+}
+.button-warning-outlined {
+  color: var(--warning);
+  border:1px solid var(--warning);
+    background-color: var(--background-primary);
+}
+.button-info-outlined {
+  color: var(--info);
+  border:1px solid var(--info);
+    background-color: var(--background-primary);
+}
+.button-error-outlined {
+  color: var(--error);
+  border:1px solid var(--error);
+    background-color: var(--background-primary);
+}
+.button-monochrome-outlined {
+  color: var(--black);
+  border:1px solid var(--black);
+    background-color: var(--background-primary);
+}
+.button-lg{
+    font-size: 1.5rem;
+}
+.button-sm{
+    font-size: 0.5rem;
+}
+.disable{
+    filter: brightness(40%);
+    cursor: inherit;
+}
