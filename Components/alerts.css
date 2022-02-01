@@ -1,0 +1,39 @@
+.alert{
+    width: 100%;
+    display: flex;
+    padding: 0.5rem;
+    margin: var(--space-xs);
+}
+.alert-primary{
+    color: var(--primary);
+    background: #cfe2ff;
+}
+.alert-secondary{
+    color: var(--dark);
+    background: var(--disable);
+}
+.alert-success{
+    color: var(--success);
+    background: #D1E7DD
+}
+
+.alert-warning{
+    color: var(--warning);
+    background: #FFF5CC
+}
+
+.alert-error{
+    color: var(--error);
+    background: #F8D7DA
+}
+.alert > .btn-alert{
+    color: var(--dark);
+    margin-left: auto;
+    background:transparent;
+    outline: none;
+    border:0px solid transparent
+}
+.alert > .btn-alert:hover{
+    cursor: pointer;
+    filter: brightness(0%);
+}
