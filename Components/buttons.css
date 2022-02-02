@@ -1,24 +1,22 @@
 .button {
   padding: var(--space-xs);
   outline: none;
-  border: 0px solid transparent;
+  border: 0px;
   border-radius: 0.2rem;
   font-family: "Merriweather Sans", sans-serif;
   display: inline-block;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.25s ease;
+  color: var(--white);
 }
 .button-primary {
-  color: var(--white);
   background: var(--primary);
 }
 .button-secondary {
-  color: var(--white);
   background: var(--secondary);
 }
 .button-success {
-  color: var(--white);
   background: var(--success);
 }
 .button-warning {
@@ -30,7 +28,6 @@
   background: var(--info);
 }
 .button-error {
-  color: var(--white);
   background: var(--error);
 }
 .button-monochrome {
@@ -112,6 +109,6 @@
 }
 .button:disabled {
   filter: brightness(40%);
-  cursor: inherit;
+  cursor: not-allowed;
   pointer-events: none;
 }
