@@ -110,15 +110,8 @@
 .button-sm {
   font-size: 0.5rem;
 }
-.disable {
+.button:disabled {
   filter: brightness(40%);
   cursor: inherit;
   pointer-events: none;
 }
-/* .disable:hover:enabled {
-    filter: brightness(40%);
-    cursor: inherit;
-  } */
-  /* .disable:disabled{
-      pointer-events: none;
-  } */
