@@ -1,16 +1,70 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRUX UI</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <div class="lighmode">
-        <div class="rootDiv">
-            <h1>CRUX UI</h1>
-        </div>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="lightmode">
+      <div class="rootDiv">
+        <h1>CRUX UI</h1>
+      </div>
+      <br />
+      <div>
+        <h1>heading1 <span class="badge badge-primary">New</span></h1>
+        <h2>
+          heading2 <span class="badge badge-secondary badge-round">New</span>
+        </h2>
+        <h3>heading3 <span class="badge badge-warning">New</span></h3>
+        <h4>heading4 <span class="badge badge-error badge-round">New</span></h4>
+        <h5>heading5 <span class="badge badge-info">New</span></h5>
+        <h5>
+          heading5 <span class="badge badge-disable badge-round">New</span>
+        </h5>
+        <h6>heading6 <span class="badge badge-success">New</span></h6>
+        <p>para text <span class="badge badge-round">New</span></p>
+        <br />
+        <button
+          style="
+            padding: var(--space-xs);
+            outline: none;
+            border: 0px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            color: var(--white);
+            background: var(--info);
+          "
+        >
+          Button
+          <span class="badge badge-disable badge-round">4</span>
+        </button>
+        <br />
+        <br />
+        <button
+          style="
+            padding: var(--space-xs);
+            outline: none;
+            border: 0px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            color: var(--white);
+            background: var(--primary);
+            position: absolute;
+          "
+        >
+          Button
+          <span class="badge badge-error badge-round badge-top">99+</span>
+        </button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
