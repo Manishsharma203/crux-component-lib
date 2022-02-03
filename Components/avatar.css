@@ -4,6 +4,7 @@
     height: 50px;
     object-fit: cover;
     border:2px solid var(--white);
+    background-color: var(--primary);
 }
 .avatar-lg{
     width: 80px;
@@ -20,8 +21,29 @@
     border-radius: 10px;
 }
 .avatar-group{
-    width: 300px;
+    /* width: 300px; */
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fit, 40px);
+    grid-template-columns: repeat(auto-fit, 35px);
+}
+.avatar-group-lg{
+    grid-template-columns: repeat(auto-fit, 65px);
+}
+.avatar-group-sm{
+    grid-template-columns: repeat(auto-fit, 20px);
+}
+.avatar-text{
+    color: var(--white);
+    text-align: center;
+    font-size: 40px;
+}
+.avatar-text-lg{
+    width: 80px;
+    height: 80px;
+    font-size: 65px;
+}
+.avatar-text-sm{
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
 }
