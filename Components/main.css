@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans+Condensed:wght@300&family=PT+Mono&family=Rubik&display=swap");
-
+@import './cards.css';
 
 :root {
   font-size: 100%;
@@ -36,6 +36,7 @@ html {
   --text-primary: var(--black);
   --text-secondary: var(--disable);
   --border-primary: var(--black);
+  --border-secondary: var(--disable);
 }
 .darkmode * {
   /* background: var(--dark); */
@@ -45,6 +46,7 @@ html {
   --text-primary: var(--white);
   --text-secondary: var(--light);
   --border-primary: var(--light);
+  --border-secondary: var(--light);
   /* --border-secondary: #a0aec0; */
 }
 * {
