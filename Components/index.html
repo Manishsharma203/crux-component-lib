@@ -1,16 +1,134 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRUX UI</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <div class="lighmode">
-        <div class="rootDiv">
-            <h1>CRUX UI</h1>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="lightmode">
+      <div class="rootDiv">
+        <h1>CRUX UI</h1>
+      </div>
+      <br />
+      <h2>Unordered list</h2>
+      <div style="width: 50vw">
+        <ul class="list-group type-none">
+          <li class="list-item active">First item</li>
+          <li class="list-item">Second item</li>
+          <li class="list-item">Third item</li>
+          <li class="list-item">Fourth item</li>
+          <li class="list-item">Sixth item</li>
+          <li class="list-item disable">Seventh item</li>
+        </ul>
+      </div>
+      <br />
+      <h2>Ordered list</h2>
+      <div style="width: 50vw">
+        <ol class="list-group type-roman-lower">
+          <li class="list-item">First item</li>
+          <li class="list-item active">Second item</li>
+          <li class="list-item">Third item</li>
+          <li class="list-item disable">Fourth item</li>
+          <li class="list-item">Sixth item</li>
+          <li class="list-item">Seventh item</li>
+        </ol>
+      </div>
+      <br />
+      <h2>Stacked ordered list</h2>
+      <div style="width: 90vw">
+        <ol class="list-group type-roman-lower">
+          <li class="list-item">
+            <div class="list-content">
+              <h2>First Stack</h2>
+              <p>lorem ofn fg jfdgjfjgk jdfk</p>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class="list-content">
+              <h2>Second Stack</h2>
+              <p>lorem ofn fg jfdgjfjgk jdfk</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <br />
+      <h2>Stacked Unordered list</h2>
+      <div style="width: 90vw">
+        <ol class="list-group type-none">
+          <li class="list-item">
+            <div class="list-content" style="display: flex">
+              <div style="flex-basis: content">
+                <img
+                  src="https://picsum.photos/100/80"
+                  style="max-width: 100%; height: auto"
+                  alt="img"
+                />
+              </div>
+              <div style="flex-grow: 1; padding: 1rem">
+                <h2>First Stack</h2>
+                <p>lorem ofn fg jfdgjfjgk jdfk</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class="list-content" style="display: flex">
+              <div style="flex-basis: content">
+                <img
+                  src="https://picsum.photos/100/80"
+                  style="max-width: 100%; height: auto"
+                  alt="img"
+                />
+              </div>
+              <div style="flex-grow: 1; padding: 1rem">
+                <h2>Second Stack</h2>
+                <p>lorem ofn fg jfdgjfjgk jdfk</p>
+              </div>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class="list-content" style="display: flex">
+              <div style="flex-basis: content">
+                <img
+                  src="https://picsum.photos/100/80"
+                  style="max-width: 100%; height: auto"
+                  alt="img"
+                />
+              </div>
+              <div style="flex-grow: 1; padding: 1rem">
+                <h2>Third Stack</h2>
+                <p>lorem ofn fg jfdgjfjgk jdfk</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <br />
+        <h2>Inline list</h2>
+        <div style="width: 50vw">
+          <ul class="list-group inline-list type-none">
+            <li class="list-item active">First item</li>
+            <li class="list-item">Second item</li>
+            <li class="list-item">Third item</li>
+            <li class="list-item">Fourth item</li>
+            <li class="list-item">Sixth item</li>
+            <li class="list-item ">Seventh item</li>
+          </ul>
         </div>
+        <br>
+        <h2>Items Differentiation</h2>
+        <div style="width: 50vw">
+          <ol class="list-group type-alpha-upper">
+            <li class="list-item item-primary">First item</li>
+            <li class="list-item item-secondary">Second item</li>
+            <li class="list-item item-warning">Third item</li>
+            <li class="list-item item-error">Fourth item</li>
+            <li class="list-item item-success">Sixth item</li>
+            <li class="list-item">Seventh item</li>
+          </ol>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
