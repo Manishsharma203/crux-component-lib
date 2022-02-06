@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans+Condensed:wght@300&family=PT+Mono&family=Rubik&display=swap");
-
+@import './navbar.css';
 
 :root {
   font-size: 100%;
