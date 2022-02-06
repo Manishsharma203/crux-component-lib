@@ -1,0 +1,18 @@
+.rating-container{
+    width: max-content;
+    /* background: aqua; */
+    display: flex;
+}
+.rating{
+    flex-grow: 1;
+}
+.rating-input{
+    display: none;
+}
+.rating-label{
+    cursor:pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+.active-rating{
+    color: var(--warning);
+}
