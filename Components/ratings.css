@@ -3,16 +3,22 @@
     /* background: aqua; */
     display: flex;
 }
-.rating{
-    flex-grow: 1;
-}
-.rating-input{
-    display: none;
-}
 .rating-label{
-    cursor:pointer;
+    flex-grow: content;
+}
+.star-icon::after{
+    content:"★";
+    font-size: 1.5rem;
     color: rgba(0, 0, 0, 0.5);
 }
-.active-rating{
+.active-rating>.star-icon::after{
     color: var(--warning);
+}
+.rating-badge{
+    display: inline-flex;
+    color: var(--text-primary);
+    background-color: var(--disable);
+    padding: 0.2rem 0.6rem;
+    line-height: 1rem;
+    border-radius: 1rem;
 }
