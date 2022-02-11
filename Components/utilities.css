@@ -1,0 +1,100 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.m-1 {
+  margin: var(--space-xs);
+}
+.m-2 {
+  margin: var(--space-sm);
+}
+.m-3 {
+  margin: var(--space-md);
+}
+.m-4 {
+  margin: var(--space-lg);
+}
+.p-1 {
+  padding: var(--space-xs);
+}
+.p-2 {
+  padding: var(--space-sm);
+}
+.p-3 {
+  padding: var(--space-md);
+}
+.p-4 {
+  padding: var(--space-lg);
+}
+
+.color-primary {
+  color: var(--primary);
+}
+.color-secondary {
+  color: var(--secondary);
+}
+.color-dark {
+  color: var(--dark);
+}
+.color-light {
+  color: var(--light);
+}
+.color-error {
+  color: var(--error);
+}
+.color-success {
+  color: var(--success);
+}
+.color-info {
+  color: var(--info);
+}
+.color-warning {
+  color: var(--warning);
+}
+.color-disable {
+  color: var(--disable);
+}
+.color-black {
+  color: var(--black);
+}
+.color-white {
+  color: var(--white);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-light {
+  background-color: var(--light);
+}
+.bg-error {
+  background-color: var(--error);
+}
+.bg-success {
+  background-color: var(--success);
+}
+.bg-info {
+  background-color: var(--info);
+}
+.bg-warning {
+  background-color: var(--warning);
+}
+.bg-disable {
+  background-color: var(--disable);
+}
+.bg-black {
+  background-color: var(--black);
+}
+.bg-white {
+  background-color: var(--white);
+}
