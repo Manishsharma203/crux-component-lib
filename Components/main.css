@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans+Condensed:wght@300&family=PT+Mono&family=Rubik&display=swap");
+@import './buttons.css';
 @import './typography.css';
 @import './alerts.css';
-
 
 :root {
   font-size: 100%;
@@ -31,23 +31,20 @@ html {
 }
 
 .lightmode * {
-  /* background: var(--white); */
-  /* color: var(--black); */
   --background-primary: var(--white);
   --background-secondary: var(--light);
   --text-primary: var(--black);
   --text-secondary: var(--disable);
   --border-primary: var(--black);
+  --border-secondary: var(--disable);;
 }
 .darkmode * {
-  /* background: var(--dark); */
-  /* color: var(--white); */
   --background-primary: var(--dark);
   --background-secondary: var(--disable);
   --text-primary: var(--white);
   --text-secondary: var(--light);
   --border-primary: var(--light);
-  /* --border-secondary: #a0aec0; */
+  --border-secondary:var(--disable);
 }
 * {
   margin: 0;
