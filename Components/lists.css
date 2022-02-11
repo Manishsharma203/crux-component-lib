@@ -1,0 +1,70 @@
+.list-group{
+    width: 100%;
+    list-style-position: inside;
+}
+.inline-list{
+    display: flex;
+}
+.list-item{
+    padding: 1rem;
+    border: 1px solid var(--border-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    word-wrap: break-word;
+}
+.list-item::marker{
+    font-weight: bolder;
+}
+.list-group > .active{
+    color: var(--white);
+    background: var(--info);
+}
+.list-group > .disable{
+    color: var(--disable);
+    pointer-events: none;
+}
+.type-none{
+    list-style-type: none;
+}
+.type-circle{
+    list-style-type: circle;
+}
+.type-square{
+    list-style-type: square;
+}
+.type-roman-lower{
+    list-style-type:lower-roman
+}
+.type-roman-upper{
+    list-style-type: upper-roman;
+}
+.type-alpha-lower{
+    list-style-type: lower-alpha;
+}
+.type-alpha-upper{
+    list-style-type: upper-alpha;
+}
+
+.list-item > .list-content{
+    display: inline-block;
+    vertical-align:top;
+    line-height: 1.2rem;
+}
+.item-primary{
+    background: var(--primary);
+}
+.item-secondary{
+    background: var(--secondary);
+}
+.item-success{
+    background: var(--success);
+}
+.item-error{
+    background: var(--error);
+}
+.item-warning{
+    background: var(--warning);
+}
+.item-light{
+    background: var(--disable);
+}
