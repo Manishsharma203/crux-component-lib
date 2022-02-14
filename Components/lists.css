@@ -6,7 +6,7 @@
     display: flex;
 }
 .list-item{
-    padding: 1rem;
+    padding: var(--space-xs);
     border: 1px solid var(--border-secondary);
     color: var(--text-primary);
     cursor: pointer;

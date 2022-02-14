@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Open+Sans+Condensed:wght@300&family=PT+Mono&family=Rubik&display=swap");
 @import './ratings.css';
-@import './utilities.css';
-@import './layout.css';
 @import './modal.css';
 @import './toast.css';
 @import './navbar.css';
@@ -14,6 +12,8 @@
 @import './buttons.css';
 @import './typography.css';
 @import './alerts.css';
+@import './utilities.css';
+@import './layout.css';
 
 :root {
   font-size: 100%;
@@ -30,10 +30,10 @@
   --warning: #ffcc00;
   --disable: #808080;
   --space-unit: 1rem;
-  --space-xs: calc(0.5 * var(--space-unit));
-  --space-sm: calc(0.75 * var(--space-unit));
-  --space-md: calc(1.25 * var(--space-unit));
-  --space-lg: calc(2 * var(--space-unit));
+  --space-xs: calc(0.25 * var(--space-unit));
+  --space-sm: calc(0.5 * var(--space-unit));
+  --space-md: calc(0.75 * var(--space-unit));
+  --space-lg: calc(1.25 * var(--space-unit));
 }
 html {
   scroll-behavior: smooth;
@@ -63,6 +63,14 @@ html {
   padding: 0;
   background:var(--background-primary);
 }
+*::-webkit-scrollbar {
+  width: 5px;
+  background: var(--background-secondary)
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 10px;
+}
 /* font-family: 'Merriweather Sans', sans-serif; --banner
 
 font-family: 'Open Sans Condensed', sans-serif;
@@ -70,3 +78,11 @@ font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'PT Mono', monospace;
 
 font-family: 'Rubik', sans-serif; */
+
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 90%;
+  }
+}

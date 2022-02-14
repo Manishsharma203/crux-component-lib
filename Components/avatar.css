@@ -1,14 +1,17 @@
 .avatar{
     display: inline-block;
-    width: 50px;
-    height: 50px;
     object-fit: cover;
     border:2px solid var(--white);
     background-color: var(--primary);
 }
+
 .avatar-lg{
     width: 80px;
     height: 80px;
+}
+.avatar-md{
+    width: 50px;
+    height: 50px;
 }
 .avatar-sm{
     width: 30px;
@@ -35,6 +38,10 @@
 .avatar-text{
     color: var(--white);
     text-align: center;
+}
+.avatar-text-md{
+    width: 50px;
+    height: 50px;
     font-size: 40px;
 }
 .avatar-text-lg{

@@ -108,3 +108,13 @@ p,
 .text-lt{
     text-align: left;
 }
+.text-bold{
+  font-weight: 900;
+}
+.text-light{
+  font-weight: 100;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}

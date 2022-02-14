@@ -101,6 +101,66 @@
   color: var(--white);
   background: var(--dark);
 }
+
+.button-primary-light {
+  color: var(--primary);
+  border: 1px solid transparent;
+}
+.button-primary-light:hover {
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.button-secondary-light {
+  color: var(--secondary);
+  border: 1px solid transparent;
+}
+.button-secondary-light:hover {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+.button-success-light {
+  color: var(--success);
+  border: 1px solid transparent;
+}
+.button-success-light:hover {
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+.button-warning-light {
+  color: var(--warning);
+  border: 1px solid transparent;
+}
+.button-warning-light:hover {
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+.button-info-light {
+  color: var(--info);
+  border: 1px solid transparent;
+}
+.button-info-light:hover {
+  color: var(--info);
+  border: 1px solid var(--info);
+}
+.button-error-light {
+  color: var(--error);
+  border: 1px solid transparent;
+}
+.button-error-light:hover {
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+.button-monochrome-light {
+  color: var(--text-primary);
+  border: 1px solid transparent;
+}
+.button-monochrome-light:hover {
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+}
+
+
 .button-lg {
   font-size: 1.5rem;
 }

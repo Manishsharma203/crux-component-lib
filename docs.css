@@ -1,0 +1,42 @@
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  display: flex;
+}
+.sidebar {
+  display: block;
+  /* background: red; */
+  height: 88vh;
+  border-right: 1px solid var(--disable);
+  /* height: max-content; */
+  overflow: auto;
+  /* overflow-y: scroll; */
+  /* overflow-x:hidden; */
+  /* overflow-x: hidden; */
+}
+.content {
+  /* background: gold; */
+  /* height: max-content; */
+  /* height: 120vh; */
+  height: 88vh;
+  overflow-y: auto;
+}
+.alert-example {
+  display: none;
+  width: 60vw;
+  height: 60px;
+  position: fixed;
+  top: 0;
+}
+a {
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .content {
+    height: 100vh;
+  }
+}

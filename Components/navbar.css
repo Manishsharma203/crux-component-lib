@@ -86,13 +86,16 @@
 
 @media screen and (max-width: 768px) {
   .navbar {
-    display: block;
+  display: block;
   max-height: 100vh;
   overflow-x: auto;
   }
   .navbar > div {
     margin-right: auto;
     display: block;
+  }
+  .nav-brand {
+    width: max-content;
   }
   .nav-content > * {
     padding:5px;

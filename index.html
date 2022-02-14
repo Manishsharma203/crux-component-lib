@@ -1,11 +1,444 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crux Component Library</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icon.png" type="image/png" />
+    <link rel="stylesheet" href="./docs.css" />
+    <link rel="stylesheet" href="./Components/main.css" />
+    <link rel="stylesheet" href="./prism.css" data-noprefix />
+    <title>Crux-ui</title>
+  </head>
+  <body>
+    <div class="rootDiv">
+      <div class="navbar bg-light sticky">
+        <input id="menu-icon" type="checkbox" />
+        <label class="menu-label" for="menu-icon"></label>
+        <div class="nav-brand">
+          <div class="h3 text-bold color-primary box-3d p-1-x bg-white">
+            CRUX -UI
+          </div>
+        </div>
+        <div class="nav-content">
+          <!-- <h3>Navbar</h3>
+              <p>Text</p>
+              <div class="submenu">
+                <input id="submenu-input" type="checkbox" />
+                <label for="submenu-input" class="submenu-text">
+                  Submenu
+                </label>
+                <ul>
+                  <li>Option 1</li>
+                  <li>Option 12</li>
+                  <li>Option 123</li>
+                </ul>
+              </div> -->
+        </div>
+        <div class="nav-end">
+          <!-- <button class="nav-btn">Button</button> -->
+        </div>
+      </div>
+      <div class="container grid-col">
+        <!-- SideBar -->
+        <div class="sidebar col-1">
+          <div class="h6 text-bold p-2-y">Components</div>
+          <ul class="list-group type-none">
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#alerts">Alerts</a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#avatar">Avatar</a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#badges"> Badges </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#buttons"> Buttons </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#cards"> Cards </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#images"> Images </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#inputs"> Inputs </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#layout"> Layout </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#lists"> Lists </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#modal"> Modal </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#navbar"> Navbar </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#ratings"> Ratings </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#toast"> Toast/Snackbar </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#typography"> Typography </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="content col-5 col-6-md">
+          <!-- Alert Section -->
+          <section id="alerts" class="p-4">
+            <h2>Alert</h2>
+            <h5 class="text-light">
+              An alert displays a short, important message in a way that
+              attracts the user's attention.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="grid-col">
+              <div class="col-5">
+                <div class="alert alert-primary">This is primary alert</div>
+                <div class="alert alert-secondary">This is secondary alert</div>
+                <div class="alert alert-success">This is success alert</div>
+                <div class="alert alert-warning">This is warning alert</div>
+                <div class="alert alert-error">This is error alert</div>
+                <div class="alert alert-primary">
+                  This is primary alert with dismiss button<button
+                    class="btn-alert"
+                  >
+                    X
+                  </button>
+                </div>
+              </div>
+            </div>
+            <pre style="height: 200px">
+                <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="alert alert-primary">This is primary alert</div>
+<div class="alert alert-secondary">This is secondary alert</div>
+<div class="alert alert-success">This is success alert</div>
+<div class="alert alert-warning">This is warning alert</div>
+<div class="alert alert-error">This is error alert</div>
+<div class="alert alert-primary">
+  This is primary alert with dismiss button<button class="btn-alert">
+    X
+  </button>
+</div>
+                </script></code>
+            </pre>
+            <div class="p-1-y">
+              <h4>Live Example</h4>
+              <div class="button button-secondary" onclick="alertPopup()">
+                Alert Pop-up
+              </div>
+              <div class="alert-example">
+                <div class="alert alert-primary">
+                  <h5>This is primary alert with dismiss button</h5>
+                  <button class="btn-alert" onclick="alertDismiss()">X</button>
+                </div>
+              </div>
+              <pre style="height: 200px">
+                <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="alert-example">
+    <div class="alert alert-primary">
+      <h5>This is primary alert with dismiss button</h5>
+      <button class="btn-alert" onclick="alertDismiss()">X</button>
+    </div>
+</div>
+<JAVASCRIPT-CODE>
+function alertPopup(){
+    const alert=document.querySelector('.alert-example')
+    alert.style.display='block'
+}
+function alertDismiss(){
+    const alert=document.querySelector('.alert-example')
+    alert.style.display='none'
+}
+                </script></code>
+            </pre>
+            </div>
+          </section>
+          <!-- Avatar Section -->
+          <section id="avatar" class="p-4">
+            <h2>Avatar</h2>
+            <h5 class="text-light">
+              An avatar is an Internet user's representation of himself or
+              herself in the form of a two-dimensional icon.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <p>
+                Avatars are available in two variants i.e. round and rectangular
+                (<span class="color-secondary">avatar-round, avatar-rect</span
+                >). All avatars can be of three standard sizes
+                <span class="color-secondary"> avatar-lg</span>,
+                <span class="color-secondary"> avatar-md</span>,<span
+                  class="color-secondary"
+                >
+                  avatar-sm</span
+                >.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div>
+                  <img
+                    class="avatar avatar-lg avatar-round"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-md avatar-round"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-sm avatar-round"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="avatar avatar-rect avatar-lg"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-md avatar-rect"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-rect avatar-sm"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                </div>
+                <pre style="height: 200px">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div>
+  <img
+    class="avatar avatar-lg avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-md avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-sm avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+</div>
+<div>
+  <img
+    class="avatar avatar-rect avatar-lg"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-md avatar-rect"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-rect avatar-sm"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+</div>                  </script></code></pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <p>
+                Letter based avatars can be used as well using class
+                <span class="color-secondary">avatar-text</span> and futher use
+                them with different sizes as well i.e.
+                <span class="color-secondary"> avatar-text-lg</span>,
+                <span class="color-secondary"> avatar-text-md</span>,<span
+                  class="color-secondary"
+                >
+                  avatar-text-sm</span
+                >.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="avatar avatar-round avatar-text avatar-text-lg">
+                  A
+                </div>
+                <div class="avatar avatar-round avatar-text avatar-text-md">
+                  B
+                </div>
+                <div class="avatar avatar-round avatar-text avatar-text-sm">
+                  C
+                </div>
+                <pre style="height: 200px">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="avatar avatar-round avatar-text avatar-text-lg">
+  A
+</div>
+<div class="avatar avatar-round avatar-text avatar-text-md">
+  B
+</div>
+<div class="avatar avatar-round avatar-text avatar-text-sm">
+  C
+</div>
+                  </script></code>
+                  </pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <p>
+                Avatars can be used in groups for specific use cases using class
+                <span class="color-secondary">avatar-group</span> on parent
+                container with variations for large and small sizes as well i.e.
+                <span class="color-secondary"> avatar-group-lg</span> and
+                <span class="color-secondary"> avatar-text-sm</span>.
+              </p>
+            </div>
+
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="avatar-group">
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                </div>
+                <pre style="height: 200px">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="avatar-group">
+<img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+</div>
+                  </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="prism.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
