@@ -111,10 +111,11 @@ p,
 .text-bold{
   font-weight: 900;
 }
-.text-light{
+.text-lighter{
   font-weight: 100;
 }
 a{
   color: inherit;
   text-decoration: none;
+  background: inherit;
 }

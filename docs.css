@@ -1,6 +1,6 @@
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 .container {
   display: flex;
 }
@@ -22,6 +22,13 @@ html {
   height: 88vh;
   overflow-y: auto;
 }
+.pre-code{
+  height: max-content;
+  max-height: 200px;
+}
+.pre-code *{
+  background: inherit;
+}
 .alert-example {
   display: none;
   width: 60vw;
@@ -31,6 +38,10 @@ html {
 }
 a {
   display: block;
+  background: inherit;
+}
+.horizontal-card{
+  width: 60%;
 }
 @media only screen and (max-width: 768px) {
   .sidebar {
@@ -38,5 +49,8 @@ a {
   }
   .content {
     height: 100vh;
+  }
+  .horizontal-card{
+    width: 100%;
   }
 }

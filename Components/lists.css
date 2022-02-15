@@ -7,10 +7,42 @@
 }
 .list-item{
     padding: var(--space-xs);
-    border: 1px solid var(--border-secondary);
     color: var(--text-primary);
     cursor: pointer;
     word-wrap: break-word;
+}
+.bordered > .list-item{
+    border: 1px solid var(--border-secondary);
+}
+.items-p-1 > .list-item{
+    padding: 0.1rem;
+}
+.items-p-2 > .list-item{
+    padding: var(--space-xs);
+}
+.items-p-3 > .list-item{
+    padding: var(--space-sm);
+}
+.items-p-4 > .list-item{
+    padding: var(--space-md);
+}
+.items-p-5 > .list-item{
+    padding: var(--space-lg);
+}
+.items-m-1 > .list-item{
+    margin: 0.1rem;
+}
+.items-m-2 > .list-item{
+    margin: var(--space-xs);
+}
+.items-m-3 > .list-item{
+    margin: var(--space-sm);
+}
+.items-m-4 > .list-item{
+    margin: var(--space-md);
+}
+.items-m-5 > .list-item{
+    margin: var(--space-lg);
 }
 .list-item::marker{
     font-weight: bolder;

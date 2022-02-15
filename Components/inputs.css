@@ -28,8 +28,11 @@
     border: 2px solid var(--border-secondary);
     pointer-events: none;
 }
-.error-input:focus{
+.error-input{
     border: 2px solid var(--error);
+}
+.success-input{
+    border: 2px solid var(--success);
 }
 .input-title{
     flex-basis: content;
@@ -71,7 +74,7 @@
     content: "";
     display: inline-block;
     height: 0.8rem;
-    width: 0.8rem;
+    width: 0.8rem;  
     background: #77b255;
     border: 1px solid white;
     border-radius: 50%;

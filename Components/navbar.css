@@ -11,7 +11,8 @@
 .navbar > div {
   display: flex;
   align-items: center;
-  padding: 4px;
+  /* padding: 4px; */
+  background: inherit;
 }
 .nav-brand {
   flex-basis: content;

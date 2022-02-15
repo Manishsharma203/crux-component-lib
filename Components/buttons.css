@@ -1,7 +1,7 @@
 .button {
-  padding: var(--space-xs);
+  padding: var(--space-sm);
   outline: none;
-  border: 0px;
+  border: none;
   border-radius: 0.2rem;
   font-family: "Merriweather Sans", sans-serif;
   display: inline-block;
@@ -171,4 +171,26 @@
   filter: brightness(40%);
   cursor: not-allowed;
   pointer-events: none;
+}
+.button-float-primary{
+  background: var(--primary);
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+.button-float-secondary{
+  background: var(--secondary);
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.4);
+}
+.button-float-primary>*{
+  background: var(--primary);
+}
+.button-float-secondary>*{
+  background: var(--secondary);
 }
