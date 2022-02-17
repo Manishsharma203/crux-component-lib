@@ -51,10 +51,10 @@
 .p-4 {
   padding: var(--space-lg);
 }
-.p-1-x {
+.p-4-x {
   padding: 0px var(--space-lg);
 }
-.p-1-y {
+.p-4-y {
   padding: var(--space-lg) 0px;
 }
 

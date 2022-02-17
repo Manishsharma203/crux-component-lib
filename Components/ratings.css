@@ -5,20 +5,33 @@
 }
 .rating-label{
     flex-grow: content;
+    font-size: 1.5rem;
 }
 .star-icon::after{
     content:"★";
-    font-size: 1.5rem;
+    font-size: inherit;
     color: rgba(0, 0, 0, 0.5);
 }
-.active-rating>.star-icon::after{
+.heart-icon::after{
+    content:"♥";
+    font-size: inherit;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.active-rating>.star-icon::after,
+.active-rating>.heart-icon::after{
     color: var(--warning);
 }
 .rating-badge{
     display: inline-flex;
+    align-items: center;
     color: var(--text-primary);
     background-color: var(--disable);
     padding: 0.2rem 0.6rem;
-    line-height: 1rem;
     border-radius: 1rem;
+}
+.rating-badge *{
+    font-size: 1rem;
+    color: inherit;
+    background: inherit;
 }

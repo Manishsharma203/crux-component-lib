@@ -29,8 +29,10 @@
     padding: 1rem;
     border-radius: 4px;
 }
-.toast-content{
+.toast-content>*{
     flex-grow: 1;
+    color: inherit;
+    background: inherit;
 }
 .toast *{
     background-color: inherit;
@@ -58,4 +60,15 @@
 }
 .toast-warning{
     background: var(--warning);
+}
+.position-bottom{
+    position: fixed;
+    bottom: 10;
+    right: 0;
+}
+
+.position-top{
+    position: fixed;
+    top: 10;
+    right: 0;
 }

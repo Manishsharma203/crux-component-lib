@@ -12,8 +12,28 @@
   </head>
   <body>
     <div class="rootDiv lightmode">
+      <!-- Modal Live example -->
+      <div class="modal">
+        <div class="modal-box">
+          <div class="modal-header">
+            <h3>Modal Header</h3>
+            <div class="btn-dismiss" onclick="modalDismiss()">x</div>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <div class="btn" onclick="modalDismiss()">Close</div>
+          </div>
+        </div>
+      </div>
       <!-- Navbar -->
-      <div class="navbar bg-light sticky p-2">
+      <div class="navbar bg-light sticky p-2" style="z-index: 100">
         <input id="menu-icon" type="checkbox" />
         <label class="menu-label" for="menu-icon"></label>
         <div class="nav-brand">
@@ -40,7 +60,7 @@
           <!-- <button class="nav-btn">Button</button> -->
         </div>
       </div>
-      <div class="container grid-col">
+      <div class="full-width grid-col">
         <!-- SideBar -->
         <div class="sidebar col-1">
           <div class="h6 text-bold p-2-y">Components</div>
@@ -217,6 +237,11 @@
       <button class="btn-alert" onclick="alertDismiss()">X</button>
     </div>
 </div>
+
+<div class="button button-secondary" onclick="alertPopup()">
+  Alert Pop-up
+</div>
+
 <JAVASCRIPT-CODE>
 function alertPopup(){
     const alert=document.querySelector('.alert-example')
@@ -1137,23 +1162,24 @@ function alertDismiss(){
           <section id="inputs" class="p-4">
             <h2 class="text-secondary">Inputs</h2>
             <h5 class="text-lighter">
-              Input fields are used to create interactive controls for web-based forms in order to accept data from the user.
+              Input fields are used to create interactive controls for web-based
+              forms in order to accept data from the user.
             </h5>
             <div class="p-1-y">
               <p>
                 Inputs fields are represented as groups using class
                 <span class="color-secondary">input-group</span>. Text can be
                 suffixed or prefixed using
-                <span class="color-secondary">input-title</span>. 
-                </p>
-                <p>
-                For checkbox
-                and radio inputs classes
+                <span class="color-secondary">input-title</span>.
+              </p>
+              <p>
+                For checkbox and radio inputs classes
                 <span class="color-secondary">check-input</span> and
-                <span class="color-secondary">radio-input</span> should be used for input fields.
-                Similiary for displaying error or success state
-                <span class="color-secondary">error-input</span> and
-                <span class="color-secondary">success-input</span> should be used.
+                <span class="color-secondary">radio-input</span> should be used
+                for input fields. Similiary for displaying error or success
+                state <span class="color-secondary">error-input</span> and
+                <span class="color-secondary">success-input</span> should be
+                used.
               </p>
             </div>
             <h4 class="p-1-y">Examples</h4>
@@ -1283,71 +1309,811 @@ function alertDismiss(){
           <section id="layout" class="p-4">
             <h2 class="text-secondary">Grid Layout</h2>
             <h5 class="text-lighter">
-              The responsive Grid layout adapts to various screen sizes and orientation,
+              The responsive Grid layout adapts to various screen sizes and
+              orientation,
             </h5>
-            <h4 class="p-1-y">Examples</h4>
             <div class="p-1-y">
-              <h5>Responsive Images</h5>
               <p>
-                Use class <span class="text-secondary">img-responsive</span> to
-                give the image responsiveness. In addition to that classes
-                <span class="text-secondary">cover</span> and
-                <span class="text-secondary">contain</span> can also be used for
-                the object-fit property.
+                Parent container must have class
+                <span class="text-secondary">grid-col</span> to achieve the
+                desired layout. The total width of layout is divide into six
+                equal imaginary width spaces. Each column can take width of any
+                number of spaces by using class
+                <span class="text-secondary">col-'space'</span>.
               </p>
+              <p>
+                For devices/screens less than or equal to 600px view port width
+                class <span class="text-secondary">col-'space'-sm</span> should
+                be used. And similiary class
+                <span class="text-secondary">col-'space'-md</span> can be used
+                for less than or equal to 768px view port width screens.
+              </p>
+              <div class="p-2">
+                <ul class="type-none">
+                  Width spaces are as follows:
+                  <li>col-1</li>
+                  <li>col-2</li>
+                  <li>col-3</li>
+                  <li>col-4</li>
+                  <li>col-5</li>
+                  <li>col-6</li>
+                </ul>
+              </div>
             </div>
+            <h4 class="p-1-y">Examples</h4>
+            <h5>Grid Columns</h5>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
-                <div>
-                  <img
-                    class="img-responsive"
-                    src="https://picsum.photos/800/300"
-                    alt="img"
-                  />
+                <div class="grid-col m-2">
+                  <div class="sample-block col-6 col-6-md col-6-sm">col-6</div>
+                  <div class="sample-block col-3 col-3-md col-3-sm">col-3</div>
+                  <div class="sample-block col-3 col-3-md col-3-sm">col-3</div>
+                  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+                  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+                  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
                 </div>
                 <pre class="pre-code">
                   <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
-<div>
-  <img
-    class="img-responsive"
-    src="https://picsum.photos/800/300"
-    alt="img"
-  />
+<div class="grid-col m-2">
+  <div class="sample-block col-6 col-6-md col-6-sm">col-6</div>
+  <div class="sample-block col-3 col-3-md col-3-sm">col-3</div>
+  <div class="sample-block col-3 col-3-md col-3-sm">col-3</div>
+  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
 </div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+            <h5 class="p-1-y">Dynamic Grid Columns</h5>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="grid-col m-2">
+                  <div class="sample-block col-1 col-1-md col-6-sm">
+                    col-1 col-1-md col-6-sm
+                  </div>
+                  <div class="sample-block col-2 col-2-md col-6-sm">
+                    col-2 col-2-md col-6-sm
+                  </div>
+                  <div class="sample-block col-3 col-2-md col-6-sm">
+                    col-3 col-2-md col-6-sm
+                  </div>
+                  <div class="sample-block col-5 col-1-md col-6-sm">
+                    col-3 col-2-md col-6-sm
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="grid-col m-2">
+  <div class="sample-block col-1 col-1-md col-6-sm">col-1 col-1-md col-6-sm</div>
+  <div class="sample-block col-2 col-2-md col-6-sm">col-2 col-2-md col-6-sm</div>
+  <div class="sample-block col-3 col-2-md col-6-sm">col-3 col-2-md col-6-sm</div>
+  <div class="sample-block col-5 col-1-md col-6-sm">col-3 col-2-md col-6-sm</div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Lists -->
+          <section id="lists" class="p-4">
+            <h2 class="text-secondary">Lists</h2>
+            <h5 class="text-lighter">
+              Lists are a continuous group of content for displaying a variety
+              of content in a vertical order.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <h5>Unorderd Basic list</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ul class="list-group type-none">
+                    <li class="list-item active">First item</li>
+                    <li class="list-item">Second item</li>
+                    <li class="list-item">Third item</li>
+                    <li class="list-item">Fourth item</li>
+                    <li class="list-item">Sixth item</li>
+                    <li class="list-item disable">Seventh item</li>
+                  </ul>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ul class="list-group type-none">
+  <li class="list-item active">First item</li>
+  <li class="list-item">Second item</li>
+  <li class="list-item">Third item</li>
+  <li class="list-item">Fourth item</li>
+  <li class="list-item">Sixth item</li>
+  <li class="list-item disable">Seventh item</li>
+</ul>
               </script></code>
                 </pre>
               </div>
             </div>
 
             <div class="p-1-y">
-              <h5>Circular Images</h5>
+              <h5>Unorderd Spaced and Bordered list</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ul class="list-group bordered items-p-4">
+                    <li class="list-item active">First item</li>
+                    <li class="list-item">Second item</li>
+                    <li class="list-item">Third item</li>
+                    <li class="list-item">Fourth item</li>
+                    <li class="list-item">Sixth item</li>
+                    <li class="list-item disable">Seventh item</li>
+                  </ul>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ul class="list-group bordered items-p-4">
+  <li class="list-item active">First item</li>
+  <li class="list-item">Second item</li>
+  <li class="list-item">Third item</li>
+  <li class="list-item">Fourth item</li>
+  <li class="list-item">Sixth item</li>
+  <li class="list-item disable">Seventh item</li>
+</ul>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Ordered list</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ol class="list-group bordered items-p-3 type-roman-lower">
+                    <li class="list-item">First item</li>
+                    <li class="list-item active">Second item</li>
+                    <li class="list-item">Third item</li>
+                    <li class="list-item disable">Fourth item</li>
+                    <li class="list-item">Sixth item</li>
+                    <li class="list-item">Seventh item</li>
+                  </ol>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ol class="list-group bordered items-p-3 type-roman-lower">
+  <li class="list-item">First item</li>
+  <li class="list-item active">Second item</li>
+  <li class="list-item">Third item</li>
+  <li class="list-item disable">Fourth item</li>
+  <li class="list-item">Sixth item</li>
+  <li class="list-item">Seventh item</li>
+</ol>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Stacked ordered list</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ol class="list-group bordered items-p-4 type-roman-lower">
+                    <li class="list-item">
+                      <div class="list-content">
+                        <div class="flex-row">
+                          <img
+                            src="https://picsum.photos/100/80"
+                            style="max-width: 100%; height: auto"
+                            alt="img"
+                          />
+                          <div class="p-1-x">
+                            <h4>First Stack</h4>
+                            <p>lorem ofn fg jfdgjfjgk jdfk</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <div class="list-content">
+                        <div class="flex-row">
+                          <img
+                            src="https://picsum.photos/100/80"
+                            style="max-width: 100%; height: auto"
+                            alt="img"
+                          />
+                          <div class="p-1-x">
+                            <h4>Second Stack</h4>
+                            <p>lorem ofn fg jfdgjfjgk jdfk</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <div class="list-content">
+                        <div class="flex-row">
+                          <img
+                            src="https://picsum.photos/100/80"
+                            style="max-width: 100%; height: auto"
+                            alt="img"
+                          />
+                          <div class="p-1-x">
+                            <h4>Third Stack</h4>
+                            <p>lorem ofn fg jfdgjfjgk jdfk</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ol class="list-group bordered items-p-4 type-roman-lower">
+  <li class="list-item">
+    <div class="list-content">
+      <div class="flex-row">
+        <img
+          src="https://picsum.photos/100/80"
+          style="max-width: 100%; height: auto"
+          alt="img"
+        />
+        <div class="p-1-x">
+          <h4>First Stack</h4>
+          <p>lorem ofn fg jfdgjfjgk jdfk</p>
+        </div>
+      </div>
+      
+    </div>
+  </li>
+  <li class="list-item">
+    <div class="list-content">
+      <div class="flex-row">
+        <img
+          src="https://picsum.photos/100/80"
+          style="max-width: 100%; height: auto"
+          alt="img"
+        />
+        <div class="p-1-x">
+          <h4>Second Stack</h4>
+          <p>lorem ofn fg jfdgjfjgk jdfk</p>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-item">
+    <div class="list-content">
+      <div class="flex-row">
+        <img
+          src="https://picsum.photos/100/80"
+          style="max-width: 100%; height: auto"
+          alt="img"
+        />
+        <div class="p-1-x">
+          <h4>Third Stack</h4>
+          <p>lorem ofn fg jfdgjfjgk jdfk</p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ol>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Items Differentiation</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ol class="list-group items-p-3 type-alpha-lower">
+                    <li class="list-item item-primary">First item</li>
+                    <li class="list-item item-secondary">Second item</li>
+                    <li class="list-item item-warning">Third item</li>
+                    <li class="list-item item-error">Fourth item</li>
+                    <li class="list-item item-success">Sixth item</li>
+                    <li class="list-item">Seventh item</li>
+                  </ol>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ol class="list-group items-p-3 type-alpha-lower">
+  <li class="list-item item-primary">First item</li>
+  <li class="list-item item-secondary">Second item</li>
+  <li class="list-item item-warning">Third item</li>
+  <li class="list-item item-error">Fourth item</li>
+  <li class="list-item item-success">Sixth item</li>
+  <li class="list-item">Seventh item</li>
+</ol>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Modal -->
+          <section id="modal" class="p-4">
+            <h2 class="text-secondary">Modal</h2>
+            <h5 class="text-lighter">
+              A modal is a dialog box/popup window that is displayed on top of
+              the current page to pause the flow of the document and highlight
+              important content.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
               <p>
-                For perfectly circular images give the image square dimesions
-                i.e. euqal widht and height. You can also use class
-                <span class="text-secondary">cover</span> in combination with
-                parent elements dimensions to achieve the same layout.
-              </p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p> -->
             </div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
                 <div>
-                  <img
-                    class="img-round img-responsive cover"
-                    src="https://picsum.photos/300"
-                    alt="img"
-                  />
+                  <div class="modal-box">
+                    <div class="modal-header">
+                      <h3>Modal Header</h3>
+                      <div class="btn-dismiss">x</div>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="btn">Button</div>
+                    </div>
+                  </div>
                 </div>
                 <pre class="pre-code">
                   <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
-<div>
-  <img
-    class="img-round img-responsive cover"
-    src="https://picsum.photos/300"
-    alt="img"
-  />
+<div class="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Modal Header</h3>
+      <div class="btn-dismiss">x</div>
+    </div>
+    <div class="modal-body">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <div class="btn">Button</div>
+    </div>
+  </div>
 </div>
               </script></code>
                 </pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <h4>Live Example</h4>
+              <div class="button button-secondary" onclick="modalPopup()">
+                See Modal
+              </div>
+              <pre class="pre-code">
+                <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Modal Header</h3>
+      <div class="btn-dismiss" onclick="modalDismiss()">x</div>
+    </div>
+    <div class="modal-body">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <div class="btn" onclick="modalDismiss()">Close</div>
+    </div>
+  </div>
+</div>
+
+<div class="button button-secondary" onclick="modalPopup()">
+  See Modal
+</div>
+
+<JAVASCRIPT-CODE>
+function modalPopup(){
+  const modal=document.querySelector('.modal')
+  modal.style.display='block'
+}
+function modalDismiss(){
+  const modal=document.querySelector('.modal')
+  modal.style.display='none'
+}
+                </script></code>
+            </pre>
+            </div>
+          </section>
+          <!-- Navbar -->
+          <section id="navbar" class="p-4">
+            <h2 class="text-secondary">NavBar</h2>
+            <h5 class="text-lighter">
+              Navbar represents the section of the page where all major
+              navigation links are present along with header for primary
+              information and logo. It is primarily presented on the top of the
+              page.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
+              <p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p> -->
+            </div>
+            <div class="navbar badge-secondary">
+              <input id="menu-icon" type="checkbox" />
+              <label class="menu-label" for="menu-icon"></label>
+              <div class="nav-brand">
+                <img src="./assets/logoipsum-logo-17.svg" alt="logo" />
+              </div>
+              <div class="nav-content">
+                <h3>Navbar</h3>
+                <p>Text</p>
+                <div class="submenu">
+                  <input id="submenu-input" type="checkbox" />
+                  <label for="submenu-input" class="submenu-text">
+                    Submenu
+                  </label>
+                  <ul>
+                    <li>Option 1</li>
+                    <li>Option 12</li>
+                    <li>Option 123</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="nav-end">
+                <button class="nav-btn">Button</button>
+              </div>
+            </div>
+            <div class="p-4-y"></div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="navbar badge-secondary">
+  <input id="menu-icon" type="checkbox" />
+  <label class="menu-label" for="menu-icon"></label>
+  <div class="nav-brand">
+    <img src="./assets/logoipsum-logo-17.svg" alt="logo" />
+  </div>
+  <div class="nav-content">
+    <h3>Navbar</h3>
+    <p>Text</p>
+    <div class="submenu">
+      <input id="submenu-input" type="checkbox" />
+      <label for="submenu-input" class="submenu-text">
+        Submenu
+      </label>
+      <ul>
+        <li>Option 1</li>
+        <li>Option 12</li>
+        <li>Option 123</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nav-end">
+    <button class="nav-btn">Button</button>
+  </div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Ratings -->
+          <section id="ratings" class="p-4">
+            <h2 class="text-secondary">Ratings</h2>
+            <h5 class="text-lighter">
+              Rating are primarily used to represent the feedback and opinions
+              of users in form of data insights.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
+              <p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p> -->
+            </div>
+            <div class="p-4-y"></div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="flex-row" style="justify-content: space-around">
+                  <p>Ratings 1:</p>
+                  <div class="rating-container">
+                    <label class="rating-label active-rating">
+                      <span class="star-icon active-rating"></span
+                    ></label>
+                    <label for="rate2" class="rating-label active-rating">
+                      <span class="star-icon"></span
+                    ></label>
+                    <label for="rate3" class="rating-label active-rating">
+                      <span class="star-icon"></span>
+                    </label>
+                    <label for="rate3" class="rating-label">
+                      <span class="star-icon"></span>
+                    </label>
+                    <label for="rate3" class="rating-label">
+                      <span class="star-icon"></span>
+                    </label>
+                  </div>
+                  <p>Ratings 2:</p>
+                  <div class="rating-container">
+                    <label class="rating-label active-rating">
+                      <span class="heart-icon active-rating"></span
+                    ></label>
+                    <label for="rate2" class="rating-label active-rating">
+                      <span class="heart-icon"></span
+                    ></label>
+                    <label for="rate3" class="rating-label active-rating">
+                      <span class="heart-icon"></span>
+                    </label>
+                    <label for="rate3" class="rating-label active-rating">
+                      <span class="heart-icon"></span>
+                    </label>
+                    <label for="rate3" class="rating-label">
+                      <span class="heart-icon"></span>
+                    </label>
+                  </div>
+
+                  <p>Ratings Badge:</p>
+                  <div class="rating-badge">
+                    <label class="rating-label active-rating">
+                      5<span class="star-icon active-rating"></span>| 5</label
+                    >
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<p>Ratings 1:</p>
+<div class="rating-container">
+  <label class="rating-label active-rating">
+    <span class="star-icon active-rating"></span
+  ></label>
+  <label for="rate2" class="rating-label active-rating">
+    <span class="star-icon"></span
+  ></label>
+  <label for="rate3" class="rating-label active-rating">
+    <span class="star-icon"></span>
+  </label>
+  <label for="rate3" class="rating-label">
+    <span class="star-icon"></span>
+  </label>
+  <label for="rate3" class="rating-label">
+    <span class="star-icon"></span>
+  </label>
+</div>
+
+<p>Ratings 2:</p>
+<div class="rating-container">
+  <label class="rating-label active-rating">
+    <span class="heart-icon active-rating"></span
+  ></label>
+  <label for="rate2" class="rating-label active-rating">
+    <span class="heart-icon"></span
+  ></label>
+  <label for="rate3" class="rating-label active-rating">
+    <span class="heart-icon"></span>
+  </label>
+  <label for="rate3" class="rating-label active-rating">
+    <span class="heart-icon"></span>
+  </label>
+  <label for="rate3" class="rating-label">
+    <span class="heart-icon"></span>
+  </label>
+</div>
+  
+<p>Ratings Badge:</p>
+                    <div class="rating-badge">
+  <label class="rating-label active-rating">
+    5<span class="star-icon active-rating"></span>| 5</label
+  >
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Toast -->
+          <section id="toast" class="p-4">
+            <h2 class="text-secondary">Toast/Snackbar</h2>
+            <h5 class="text-lighter">
+              Toasts or Snackbar are used to notify the user about any event
+              during the user interaction. It can appear/disappear without user
+              input. It does not interfare with the user interaction.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
+              <p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p> -->
+            </div>
+            <div class="p-4-y"></div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="toast toast-primary" style="width: 300px">
+                  <div class="toast-content">
+                    <p>Toast Example. Variation-primary</p>
+                  </div>
+                  <div class="toast-dismiss">
+                    <span class="iconify" data-icon="charm:cross"></span>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="toast toast-primary" style="width: 60vw;">
+  <div class="toast-content">
+    <h4>Toast Text lorem ipsum</h4>
+  </div>
+  <div class="toast-dismiss">
+    <span class="iconify" data-icon="charm:cross"></span>
+  </div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <h4>Live Example</h4>
+                <div class="button button-secondary" onclick="toastPopup()()">
+                  See Toast
+                </div>
+                <div class="toast-example">
+                  <div class="toast-example toast toast-error position-bottom">
+                    <div class="toast-content">
+                      <p>Toast Example. Variation-error</p>
+                    </div>
+                    <div class="toast-dismiss" onclick="toastDismiss()">
+                      <span class="iconify" data-icon="charm:cross"></span>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="toast-example">
+  <div class="toast-example toast toast-error position-bottom">
+    <div class="toast-content">
+      <p>Toast Example. Variation-error</p>
+    </div>
+    <div class="toast-dismiss" onclick="toastDismiss()">
+      <span class="iconify" data-icon="charm:cross"></span>
+    </div>
+  </div>
+</div>
+
+<JAVASCRIPT-CODE>
+function toastPopup(){
+  const toast=document.querySelector('.toast-example')
+  toast.style.display='block'
+}
+function toastDismiss(){
+  const toast=document.querySelector('.toast-example')
+  toast.style.display='none'
+}
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+
+          <section id="typography" class="p-4">
+            <h2 class="text-secondary">Typography</h2>
+            <h5 class="text-lighter">
+              Crux-ui provides various variations of typography to present your
+              content in a clear manner.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
+                  <p>
+                    Use class <span class="text-secondary">img-responsive</span> to
+                    give the image responsiveness. In addition to that classes
+                    <span class="text-secondary">cover</span> and
+                    <span class="text-secondary">contain</span> can also be used for
+                    the object-fit property.
+                  </p> -->
+            </div>
+            <div class="p-4-y"></div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="grid-col">
+                  <div class="col-2 col-2-md col-6-sm">
+                    <div class="banner1">b1.Banner</div>
+                    <div class="banner2">b2.Banner</div>
+                    <div class="banner3">b3.Banner</div>
+                    <div class="banner4">b4.Banner</div>
+                    <div class="banner5">b5.Banner</div>
+                    <div class="banner6">b6.Banner</div>
+                  </div>
+                  <div class="col-2 col-2-md col-6-sm">
+                    <div class="h1">h1.Heading</div>
+                    <div class="h2">h2.Heading</div>
+                    <div class="h3">h3.Heading</div>
+                    <div class="h4">h4.Heading</div>
+                    <div class="h5">h5.Heading</div>
+                    <div class="h6">h6.Heading</div>
+                  </div>
+                  <div class="col-2 col-2-md col-6-sm">
+                      <p class="text-primary">text-primary</p>
+                      <p class="text-secondary">text-secondary</p>
+                      <p class="text-info">text-info</p>
+                      <p class="text-error">text-error</p>
+                      <p class="text-disable">text-disable</p>
+                      <p class="text-warning">text-warning</p>
+                      <p>text-normal</p>
+                      <p class="text-monospace">text-monospace</p>
+                      <p class="text-condensed">text-condensed</p>
+                      <p class="text-small">text-small</p>
+                      <p class="text-center">text-center</p>
+                    </div>
+                </div>
+                <pre class="pre-code">
+                      <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="grid-col">
+  <div class="col-2 col-2-md col-6-sm">
+    <div class="banner1">b1.Banner</div>
+    <div class="banner2">b2.Banner</div>
+    <div class="banner3">b3.Banner</div>
+    <div class="banner4">b4.Banner</div>
+    <div class="banner5">b5.Banner</div>
+    <div class="banner6">b6.Banner</div>
+  </div>
+  <div class="col-2 col-2-md col-6-sm">
+    <div class="h1">h1.Heading</div>
+    <div class="h2">h2.Heading</div>
+    <div class="h3">h3.Heading</div>
+    <div class="h4">h4.Heading</div>
+    <div class="h5">h5.Heading</div>
+    <div class="h6">h6.Heading</div>
+  </div>
+  <div class="col-2 col-2-md col-6-sm">
+      <p class="text-primary">text-primary</p>
+      <p class="text-secondary">text-secondary</p>
+      <p class="text-info">text-info</p>
+      <p class="text-error">text-error</p>
+      <p class="text-disable">text-disable</p>
+      <p class="text-warning">text-warning</p>
+      <p>text-normal</p>
+      <p class="text-monospace">text-monospace</p>
+      <p class="text-condensed">text-condensed</p>
+      <p class="text-small">text-small</p>
+      <p class="text-center">text-center</p>
+    </div>
+</div>
+                  </script></code>
+                    </pre>
               </div>
             </div>
           </section>

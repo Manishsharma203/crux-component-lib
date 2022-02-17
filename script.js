@@ -64,3 +64,19 @@ function alertDismiss() {
   const alert = document.querySelector(".alert-example");
   alert.style.display = "none";
 }
+function modalPopup(){
+  const modal=document.querySelector('.modal')
+  modal.style.display='block'
+}
+function modalDismiss(){
+  const modal=document.querySelector('.modal')
+  modal.style.display='none'
+}
+function toastPopup(){
+  const toast=document.querySelector('.toast-example')
+  toast.style.display='block'
+}
+function toastDismiss(){
+  const toast=document.querySelector('.toast-example')
+  toast.style.display='none'
+}

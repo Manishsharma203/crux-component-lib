@@ -1,5 +1,7 @@
 .modal {
+  display: none;
   position: fixed;
+  z-index: 1000;
   /* width: 40vw;
   height: max-content; */
   /* overflow-y: auto; */
@@ -18,12 +20,13 @@
   width: 40vw;
   height: max-content;
   position: relative;
-  top: 10vh;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
   z-index: 1;
+  border: 1px solid var(--border-primary);
 }
 .modal-box > div{
   padding: 1rem;

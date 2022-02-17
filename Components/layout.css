@@ -2,16 +2,6 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
-.container {
-  width: 100%;
-}
-.block {
-  height: 200px;
-  color: var(--white);
-  background: var(--primary);
-  border: 1px solid var(--white);
-  text-align: center;
-}
 .col-1 {
   grid-column: span 1;
 }

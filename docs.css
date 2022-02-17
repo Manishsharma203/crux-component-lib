@@ -1,6 +1,9 @@
 /* html {
   scroll-behavior: smooth;
 } */
+*{
+  transition: all 0.5s ease;
+}
 .container {
   display: flex;
 }
@@ -43,6 +46,21 @@ a {
 .horizontal-card{
   width: 60%;
 }
+.responsive-width{
+  width: 50%;
+}
+.sample-block {
+  height: 100px;
+  color: var(--white);
+  background: var(--info);
+  border: 1px solid var(--white);
+  text-align: center;
+}
+.toast-example{
+  display: none;
+  width: 300px;
+  z-index: 200;
+}
 @media only screen and (max-width: 768px) {
   .sidebar {
     display: none;
@@ -52,5 +70,14 @@ a {
   }
   .horizontal-card{
     width: 100%;
+  }
+  .responsive-width{
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive-width{
+    width: 90%;
   }
 }

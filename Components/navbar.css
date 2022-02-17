@@ -8,7 +8,7 @@
   padding: 4px;
   position: relative;
 }
-.navbar > div {
+.navbar  * {
   display: flex;
   align-items: center;
   /* padding: 4px; */
@@ -65,8 +65,9 @@
 .submenu > ul {
   display: none;
   position: absolute;
-  padding-top: 1rem;
-  background: var(--background-primary);
+  top:2rem;
+  /* padding-top: 1rem; */
+  background: inherit;
   list-style-type: none;
   text-align: start;
 }
@@ -84,7 +85,11 @@
 #submenu-input:checked ~ .submenu-text::after{
     content:"▲";
 }
-
+.nav-float-rt {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+}
 @media screen and (max-width: 768px) {
   .navbar {
   display: block;
@@ -107,8 +112,7 @@
     right: 10;
     cursor: pointer;
   }
-  #menu-icon:checked ~ .nav-content,
-  #menu-icon:checked ~ .nav-end {
+  #menu-icon:checked ~ .nav-content{
     transition: all 2s ease;
     display: none;
   }
