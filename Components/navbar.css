@@ -112,7 +112,8 @@
     right: 10;
     cursor: pointer;
   }
-  #menu-icon:checked ~ .nav-content{
+  #menu-icon:checked ~ .nav-content,
+  #menu-icon:checked ~ .nav-end{
     transition: all 2s ease;
     display: none;
   }
