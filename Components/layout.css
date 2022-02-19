@@ -2,6 +2,18 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 1.5rem;
+}
+.gap-3 {
+  gap: 2rem;
+}
+.gap-4 {
+  gap: 2.5rem;
+}
 .col-1 {
   grid-column: span 1;
 }
