@@ -88,7 +88,7 @@
 .nav-float-rt {
   position: absolute;
   top: 0;
-  right: 2rem;
+  right: 3rem;
 }
 @media screen and (max-width: 768px) {
   .navbar {
