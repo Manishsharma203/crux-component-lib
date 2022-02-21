@@ -112,16 +112,16 @@
     right: 10;
     cursor: pointer;
   }
-  #menu-icon:checked ~ .nav-content,
-  #menu-icon:checked ~ .nav-end{
+  #menu-icon:not(:checked) ~ .nav-content,
+  #menu-icon:not(:checked) ~ .nav-end{
     transition: all 2s ease;
     display: none;
   }
-  #menu-icon:checked ~ .menu-label::after {
+  #menu-icon:not(:checked) ~ .menu-label::after {
     content: "☰";
     font-size: 2rem;
   }
-  #menu-icon:not(:checked) ~ .menu-label::after {
+  #menu-icon:checked ~ .menu-label::after {
     content: "✖";
     font-size: 2rem;
   }

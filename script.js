@@ -15,6 +15,8 @@ const buttonsList = {
   typography: "Typography",
 };
 
+const body = document.getElementsByTagName("body")[0];
+
 function firstButtonReady() {
   const buttons = document.querySelectorAll(".sidebar .button");
   buttons[0].setAttribute("class", "button button-primary full-width");
@@ -45,14 +47,20 @@ function unselectButtons(value) {
     console.log("name", buttons[i].firstElementChild.innerHTML);
     if (buttons[i].firstElementChild.innerHTML !== value) {
       buttons[i].removeAttribute("class");
-      buttons[i].setAttribute(
-        "class",
-        "button button-primary-light full-width"
-      );
+      if (localStorage.getItem("theme") === "dark") {
+        buttons[i].setAttribute("class", "button button-primary full-width");
+      } else {
+        buttons[i].setAttribute(
+          "class",
+          "button button-primary-light full-width"
+        );
+      }
     }
   }
 }
 window.onload = function () {
+  setTheme();
+  toggleButtonsColor(localStorage.getItem('theme'))
   firstButtonReady();
 };
 
@@ -64,25 +72,66 @@ function alertDismiss() {
   const alert = document.querySelector(".alert-example");
   alert.style.display = "none";
 }
-function modalPopup(){
-  const modal=document.querySelector('.modal')
-  modal.style.display='block'
+function modalPopup() {
+  const modal = document.querySelector(".modal");
+  modal.style.display = "block";
 }
-function modalDismiss(){
-  const modal=document.querySelector('.modal')
-  modal.style.display='none'
+function modalDismiss() {
+  const modal = document.querySelector(".modal");
+  modal.style.display = "none";
 }
-function toastPopup(){
-  const toast=document.querySelector('.toast-example')
-  toast.style.display='block'
+function toastPopup() {
+  const toast = document.querySelector(".toast-example");
+  toast.style.display = "block";
 }
-function toastDismiss(){
-  const toast=document.querySelector('.toast-example')
-  toast.style.display='none'
+function toastDismiss() {
+  const toast = document.querySelector(".toast-example");
+  toast.style.display = "none";
 }
 
-function navbarToggle(){
-  const menuIcon=document.querySelector('#menu-icon')
+function navbarToggle() {
+  const menuIcon = document.querySelector("#menu-icon");
   menuIcon.checked = !menuIcon.checked;
-  // menu-icon
+}
+function themeToggle() {
+  const themeToggle=document.getElementById('themeToggle')
+  if (body.classList.contains("darkmode")) {
+    localStorage.setItem("theme", "light");
+    themeToggle.innerHTML='☀️'
+    body.setAttribute("class", "lightmode");
+    toggleButtonsColor('light')
+  } else {
+    localStorage.setItem("theme", "dark");
+    themeToggle.innerHTML='🌚'
+    body.setAttribute("class", "darkmode");
+    toggleButtonsColor('dark')
+  }
+}
+function setTheme() {
+  const theme = localStorage.getItem("theme");
+  const themeToggle=document.getElementById('themeToggle')
+  if (theme === "dark") {
+    body.setAttribute("class", "darkmode");
+    themeToggle.innerHTML='🌚'
+  } else {
+    body.setAttribute("class", "lightmode");
+    themeToggle.innerHTML='☀️'
+  }
+}
+function toggleButtonsColor(theme){
+  const sidebarButtons=document.querySelectorAll('.sidebar .button')
+  if(theme==='dark'){
+    for(let i=0;i<sidebarButtons.length;i++){
+      sidebarButtons[i].setAttribute(
+        "class",
+        "button button-primary full-width")
+    }
+  }
+  else{
+    for(let i=0;i<sidebarButtons.length;i++){
+      sidebarButtons[i].setAttribute(
+        "class",
+        "button button-primary-light full-width")
+    }
+  }
 }

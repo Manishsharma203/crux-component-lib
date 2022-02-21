@@ -199,6 +199,7 @@
 }
 table {
   border-collapse: collapse;
+  color: var(--text-primary);
 }
 td,
 th {

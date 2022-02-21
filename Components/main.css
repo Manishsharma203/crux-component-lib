@@ -42,6 +42,12 @@ html {
   padding: 0;
 }
 
+.lightmode{
+  background: var(--white);
+}
+.darkmode{
+  background: var(--dark);
+}
 .lightmode * {
   --background-primary: var(--white);
   --background-secondary: var(--light);

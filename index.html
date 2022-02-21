@@ -24,13 +24,10 @@
           <div class="flex-row">
             <div>
               <button class="button button-primary-light">
-                <a href="./index.html">Home</a>
-              </button>
-            </div>
-            <div>
-              <button class="button button-primary-light">
                 <a href="./docs.html">Doccumentation</a>
               </button>
+            </div>
+            <div class="button" id="themeToggle" onclick="themeToggle()">☀️
             </div>
           </div>
         </div>
@@ -64,8 +61,24 @@
             <div class="banner6 p-4 text-primary" id="installation">Installation</div>
             <div class="h6 p-4-x">Copy-paste the stylesheet <link> into your <head> before all other stylesheets to load our CSS.</div>
             <div class="h6 p-4-x">Use the class names directly from the doccumentation.</div>
-                <pre><code class="language-html">&lt;link rel="stylesheet" href="./Components/main.css" /></code></pre>
+                <pre class="pre-code-home"><code class="language-html">&lt;link rel="stylesheet" href="./Components/main.css" /></code></pre>
             </div>
+            <div class="h6 p-4-x">Use the code below to switch between darkmode and lightmode.</div>
+            <div class="m-4-x">
+            <pre class="pre-code-home"><code class="language-html">
+function themeToggle() {
+  const body = document.getElementsByTagName("body")[0];
+  if (body.classList.contains("darkmode")) {
+    localStorage.setItem("theme", "light");
+    body.setAttribute("class", "lightmode");
+  } else {
+    localStorage.setItem("theme", "dark");
+    body.setAttribute("class", "darkmode");
+  }
+}
+                </code></pre>
+            </div>
+          </div>
             <div class="h6 p-4-x">For more information. Refer the Doccumentation</div>
             <button class="button button-primary m-4">
                 <a href="./docs.html">Doccumentation</a></button>

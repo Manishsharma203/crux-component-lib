@@ -11,7 +11,7 @@
     <title>Crux-ui</title>
   </head>
   <body>
-    <div class="rootDiv lightmode">
+    <div class="rootDiv">
       <!-- Modal Live example -->
       <div class="modal">
         <div class="modal-box">
@@ -49,9 +49,9 @@
               </button>
             </div>
             <div>
-              <button class="button button-primary-light">
-                <a href="./docs.html">Doccumentation</a>
-              </button>
+              <div class="button" id="themeToggle" onclick="themeToggle()">
+                ☀️
+              </div>
             </div>
           </div>
         </div>
@@ -2269,7 +2269,9 @@ function toastDismiss(){
                   </tr>
                   <tr>
                     <td>m-{1/2/3/4}-{x/y}</td>
-                    <td>x denotes Horizontal margin. y denotes Vertical margin.</td>
+                    <td>
+                      x denotes Horizontal margin. y denotes Vertical margin.
+                    </td>
                   </tr>
 
                   <tr>
@@ -2278,7 +2280,9 @@ function toastDismiss(){
                   </tr>
                   <tr>
                     <td>p-{1/2/3/4}-{x/y}</td>
-                    <td>x denotes Horizontal padding. y denotes Vertical padding.</td>
+                    <td>
+                      x denotes Horizontal padding. y denotes Vertical padding.
+                    </td>
                   </tr>
                   <tr>
                     <td>flex-{row/col}</td>
@@ -2289,12 +2293,22 @@ function toastDismiss(){
                     <td>flex-wrap</td>
                   </tr>
                   <tr>
-                    <td>color-<span class="text-secondary">{colorCode*}</span></td>
-                    <td><span class="text-secondary">{colorCode*}</span>:primary/secondary/dark/light/error/success/info/warning/disable/black/white</td>
+                    <td>
+                      color-<span class="text-secondary">{colorCode*}</span>
+                    </td>
+                    <td>
+                      <span class="text-secondary">{colorCode*}</span
+                      >:primary/secondary/dark/light/error/success/info/warning/disable/black/white
+                    </td>
                   </tr>
                   <tr>
-                    <td>bg-<span class="text-secondary">{backgroundColor*}</span></td>
-                    <td><span class="text-secondary">{backgroundColor*}</span>:none/primary/secondary/dark/light/error/success/info/warning/disable/black/white</td>
+                    <td>
+                      bg-<span class="text-secondary">{backgroundColor*}</span>
+                    </td>
+                    <td>
+                      <span class="text-secondary">{backgroundColor*}</span
+                      >:none/primary/secondary/dark/light/error/success/info/warning/disable/black/white
+                    </td>
                   </tr>
                   <tr>
                     <td>box-3d</td>
@@ -2306,11 +2320,18 @@ function toastDismiss(){
                   </tr>
                   <tr>
                     <td>sticky, fixed, relative</td>
-                    <td>position sticky,fixed with top:0 and position relative</td>
+                    <td>
+                      position sticky,fixed with top:0 and position relative
+                    </td>
                   </tr>
                   <tr>
-                    <td>border-<span class="text-secondary">{borderColor*}</span></td>
-                    <td><span class="text-secondary">{borderColor*}</span>:primary/secondary/dark/light/error/success</td>
+                    <td>
+                      border-<span class="text-secondary">{borderColor*}</span>
+                    </td>
+                    <td>
+                      <span class="text-secondary">{borderColor*}</span
+                      >:primary/secondary/dark/light/error/success
+                    </td>
                   </tr>
                   <tr>
                     <td>align-center, space-between, justify-center</td>
