@@ -41,14 +41,14 @@
             CRUX -UI
           </div>
         </div>
-        <div class="nav-content bg-none m-1">
-          <div class="grid-col">
-            <div class="col-1">
+        <div class="nav-float-rt bg-none m-1">
+          <div class="flex-row">
+            <div>
               <button class="button button-primary-light">
                 <a href="./index.html">Home</a>
               </button>
             </div>
-            <div class="col-4">
+            <div>
               <button class="button button-primary-light">
                 <a href="./docs.html">Doccumentation</a>
               </button>
@@ -170,6 +170,14 @@
                   <a href="#typography"> Typography </a>
                 </button>
               </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#utilities"> Utilities </a>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -180,7 +188,7 @@
       <div class="full-width grid-col">
         <!-- SideBar -->
         <div class="sidebar col-1">
-          <div class="h6 text-bold p-2-y">Components</div>
+          <div class="h6 text-bold p-2-y text-center">Components</div>
           <ul class="list-group items-p-2 type-none">
             <li class="list-item">
               <button
@@ -292,6 +300,14 @@
                 onclick="selectComponent(event)"
               >
                 <a href="#typography"> Typography </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#utilities"> Utilities </a>
               </button>
             </li>
           </ul>
@@ -1758,6 +1774,12 @@ function alertDismiss(){
               the current page to pause the flow of the document and highlight
               important content.
             </h5>
+            <p class="p-4-y">
+              While creating modals the stacking context must be kept in mind
+              also. As the Modal use position:
+              <span class="text-secondary">absolute</span> therefore stacking
+              context is important while using it.
+            </p>
             <h4 class="p-1-y">Examples</h4>
             <div class="p-1-y">
               <!-- <h5>Responsive Images</h5>
@@ -2144,7 +2166,7 @@ function toastDismiss(){
               </div>
             </div>
           </section>
-
+          <!-- Typography -->
           <section id="typography" class="p-4">
             <h2 class="text-secondary">Typography</h2>
             <h5 class="text-lighter">
@@ -2152,8 +2174,7 @@ function toastDismiss(){
               content in a clear manner.
             </h5>
             <h4 class="p-1-y">Examples</h4>
-            <div class="p-1-y">
-            </div>
+            <div class="p-1-y"></div>
             <div class="p-4-y"></div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
@@ -2224,6 +2245,83 @@ function toastDismiss(){
                   </script></code>
                     </pre>
               </div>
+            </div>
+          </section>
+          <!-- Utilities -->
+          <section id="utilities" class="p-4">
+            <h2 class="text-secondary">Utility Classes</h2>
+            <h5 class="text-lighter m-4-y">
+              Crux-ui provides various utility classes for different use cases
+              to build a clean UI faster.
+            </h5>
+            <div class="overflowX">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Class</th>
+                    <th>Use</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>m-{1/2/3/4}</td>
+                    <td>four variations of margins (lowest to highest).</td>
+                  </tr>
+                  <tr>
+                    <td>m-{1/2/3/4}-{x/y}</td>
+                    <td>x denotes Horizontal margin. y denotes Vertical margin.</td>
+                  </tr>
+
+                  <tr>
+                    <td>p-{1/2/3/4}</td>
+                    <td>four variations of padding. (lowest to highest).</td>
+                  </tr>
+                  <tr>
+                    <td>p-{1/2/3/4}-{x/y}</td>
+                    <td>x denotes Horizontal padding. y denotes Vertical padding.</td>
+                  </tr>
+                  <tr>
+                    <td>flex-{row/col}</td>
+                    <td>Aligning elements into rows or columns</td>
+                  </tr>
+                  <tr>
+                    <td>wrap</td>
+                    <td>flex-wrap</td>
+                  </tr>
+                  <tr>
+                    <td>color-<span class="text-secondary">{colorCode*}</span></td>
+                    <td><span class="text-secondary">{colorCode*}</span>:primary/secondary/dark/light/error/success/info/warning/disable/black/white</td>
+                  </tr>
+                  <tr>
+                    <td>bg-<span class="text-secondary">{backgroundColor*}</span></td>
+                    <td><span class="text-secondary">{backgroundColor*}</span>:none/primary/secondary/dark/light/error/success/info/warning/disable/black/white</td>
+                  </tr>
+                  <tr>
+                    <td>box-3d</td>
+                    <td>Creating 3d effect for any container</td>
+                  </tr>
+                  <tr>
+                    <td>full-width</td>
+                    <td>width:100%</td>
+                  </tr>
+                  <tr>
+                    <td>sticky, fixed, relative</td>
+                    <td>position sticky,fixed with top:0 and position relative</td>
+                  </tr>
+                  <tr>
+                    <td>border-<span class="text-secondary">{borderColor*}</span></td>
+                    <td><span class="text-secondary">{borderColor*}</span>:primary/secondary/dark/light/error/success</td>
+                  </tr>
+                  <tr>
+                    <td>align-center, space-between, justify-center</td>
+                    <td>managing content inside flex</td>
+                  </tr>
+                  <tr>
+                    <td>overflow{X/Y}</td>
+                    <td>managing scrollbar</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
         </div>

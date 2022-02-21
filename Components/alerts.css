@@ -4,6 +4,10 @@
     padding: 0.5rem;
     margin: var(--space-xs);
 }
+.alert>*{
+    color: inherit;
+    background: inherit;
+}
 .alert-primary{
     color: var(--primary);
     background: #cfe2ff;
