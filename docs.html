@@ -1,0 +1,2235 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icon.png" type="image/png" />
+    <link rel="stylesheet" href="./docs.css" />
+    <link rel="stylesheet" href="./Components/main.css" />
+    <link rel="stylesheet" href="./prism.css" data-noprefix />
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    <title>Crux-ui</title>
+  </head>
+  <body>
+    <div class="rootDiv lightmode">
+      <!-- Modal Live example -->
+      <div class="modal">
+        <div class="modal-box">
+          <div class="modal-header">
+            <h3>Modal Header</h3>
+            <div class="btn-dismiss" onclick="modalDismiss()">x</div>
+          </div>
+          <div class="modal-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <div class="btn" onclick="modalDismiss()">Close</div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar -->
+      <div class="navbar bg-light sticky p-2" style="z-index: 100">
+        <input id="menu-icon" type="checkbox" />
+        <label class="menu-label" for="menu-icon"></label>
+        <div class="nav-brand">
+          <div class="h3 text-bold color-primary box-3d p-1-x bg-white">
+            CRUX -UI
+          </div>
+        </div>
+        <div class="nav-content bg-none m-1">
+          <div class="grid-col">
+            <div class="col-1">
+              <button class="button button-primary-light">
+                <a href="./index.html">Home</a>
+              </button>
+            </div>
+            <div class="col-4">
+              <button class="button button-primary-light">
+                <a href="./docs.html">Doccumentation</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="nav-content">
+          <div id="content-list">
+            <ul class="list-group flex-col items-p-2 type-none">
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#alerts">Alerts</a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#avatar">Avatar</a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#badges"> Badges </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#buttons"> Buttons </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#cards"> Cards </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#images"> Images </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#inputs"> Inputs </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#layout"> Layout </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#lists"> Lists </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#modal"> Modal </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#navbar"> Navbar </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#ratings"> Ratings </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#toast"> Toast/Snackbar </a>
+                </button>
+              </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#typography"> Typography </a>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-end">
+          <!-- <button class="nav-btn">Button</button> -->
+        </div>
+      </div>
+      <div class="full-width grid-col">
+        <!-- SideBar -->
+        <div class="sidebar col-1">
+          <div class="h6 text-bold p-2-y">Components</div>
+          <ul class="list-group items-p-2 type-none">
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#alerts">Alerts</a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#avatar">Avatar</a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#badges"> Badges </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#buttons"> Buttons </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#cards"> Cards </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#images"> Images </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#inputs"> Inputs </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#layout"> Layout </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#lists"> Lists </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#modal"> Modal </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#navbar"> Navbar </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#ratings"> Ratings </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#toast"> Toast/Snackbar </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#typography"> Typography </a>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="content col-5 col-6-md">
+          <!-- Alert Section -->
+          <section id="alerts" class="p-4">
+            <h2 class="text-secondary">Alert</h2>
+            <h5 class="text-lighter">
+              An alert displays a short, important message in a way that
+              attracts the user's attention.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="grid-col">
+              <div class="col-5">
+                <div class="alert alert-primary">This is primary alert</div>
+                <div class="alert alert-secondary">This is secondary alert</div>
+                <div class="alert alert-success">This is success alert</div>
+                <div class="alert alert-warning">This is warning alert</div>
+                <div class="alert alert-error">This is error alert</div>
+                <div class="alert alert-primary">
+                  This is primary alert with dismiss button<button
+                    class="btn-alert"
+                  >
+                    X
+                  </button>
+                </div>
+              </div>
+            </div>
+            <pre class="pre-code">
+                <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="alert alert-primary">This is primary alert</div>
+<div class="alert alert-secondary">This is secondary alert</div>
+<div class="alert alert-success">This is success alert</div>
+<div class="alert alert-warning">This is warning alert</div>
+<div class="alert alert-error">This is error alert</div>
+<div class="alert alert-primary">
+  This is primary alert with dismiss button<button class="btn-alert">
+    X
+  </button>
+</div>
+                </script></code>
+            </pre>
+            <div class="p-1-y">
+              <h4>Live Example</h4>
+              <div class="button button-secondary" onclick="alertPopup()">
+                Alert Pop-up
+              </div>
+              <div class="alert-example">
+                <div class="alert alert-primary">
+                  <h5>This is primary alert with dismiss button</h5>
+                  <button class="btn-alert" onclick="alertDismiss()">X</button>
+                </div>
+              </div>
+              <pre class="pre-code">
+                <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="alert-example">
+    <div class="alert alert-primary">
+      <h5>This is primary alert with dismiss button</h5>
+      <button class="btn-alert" onclick="alertDismiss()">X</button>
+    </div>
+</div>
+
+<div class="button button-secondary" onclick="alertPopup()">
+  Alert Pop-up
+</div>
+
+<JAVASCRIPT-CODE>
+function alertPopup(){
+    const alert=document.querySelector('.alert-example')
+    alert.style.display='block'
+}
+function alertDismiss(){
+    const alert=document.querySelector('.alert-example')
+    alert.style.display='none'
+}
+                </script></code>
+            </pre>
+            </div>
+          </section>
+          <!-- Avatar Section -->
+          <section id="avatar" class="p-4">
+            <h2 class="text-secondary">Avatar</h2>
+            <h5 class="text-lighter">
+              An avatar is an Internet user's representation of himself or
+              herself in the form of a two-dimensional icon.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <p>
+                Avatars are available in two variants i.e. round and rectangular
+                (<span class="color-secondary">avatar-round, avatar-rect</span
+                >). All avatars can be of three standard sizes
+                <span class="color-secondary"> avatar-lg</span>,
+                <span class="color-secondary"> avatar-md</span>,<span
+                  class="color-secondary"
+                >
+                  avatar-sm</span
+                >.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div>
+                  <img
+                    class="avatar avatar-lg avatar-round"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-md avatar-round"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-sm avatar-round"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="avatar avatar-rect avatar-lg"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-md avatar-rect"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-rect avatar-sm"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div>
+  <img
+    class="avatar avatar-lg avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-md avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-sm avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+</div>
+<div>
+  <img
+    class="avatar avatar-rect avatar-lg"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-md avatar-rect"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-rect avatar-sm"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+</div>                  </script></code></pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <p>
+                Letter based avatars can be used as well using class
+                <span class="color-secondary">avatar-text</span> and futher use
+                them with different sizes as well i.e.
+                <span class="color-secondary"> avatar-text-lg</span>,
+                <span class="color-secondary"> avatar-text-md</span>,<span
+                  class="color-secondary"
+                >
+                  avatar-text-sm</span
+                >.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="avatar avatar-round avatar-text avatar-text-lg">
+                  A
+                </div>
+                <div class="avatar avatar-round avatar-text avatar-text-md">
+                  B
+                </div>
+                <div class="avatar avatar-round avatar-text avatar-text-sm">
+                  C
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="avatar avatar-round avatar-text avatar-text-lg">
+  A
+</div>
+<div class="avatar avatar-round avatar-text avatar-text-md">
+  B
+</div>
+<div class="avatar avatar-round avatar-text avatar-text-sm">
+  C
+</div>
+                  </script></code>
+                  </pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <p>
+                Avatars can be used in groups for specific use cases using class
+                <span class="color-secondary">avatar-group</span> on parent
+                container with variations for large and small sizes as well i.e.
+                <span class="color-secondary"> avatar-group-lg</span> and
+                <span class="color-secondary"> avatar-text-sm</span>.
+              </p>
+            </div>
+
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="avatar-group">
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                  <img
+                    class="avatar avatar-round avatar-md"
+                    src="https://picsum.photos/200"
+                    alt="avatar"
+                  />
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="avatar-group">
+<img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+  <img
+    class="avatar avatar-round"
+    src="https://picsum.photos/200"
+    alt="avatar"
+  />
+</div>
+                  </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Badges -->
+          <section id="badges" class="p-4">
+            <h2 class="text-secondary">Badges</h2>
+            <h5 class="text-lighter">
+              Badges are used to add or highlight additional information to the
+              content.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <h5>Badges with text</h5>
+              <p>
+                Badges with text can be used with various variations as follows:
+              </p>
+              <span class="color-secondary">badge-round</span>,
+              <span class="color-secondary">badge-primary</span>,
+              <span class="color-secondary">badge-secondary</span>,
+              <span class="color-secondary">badge-disable</span>,
+              <span class="color-secondary">badge-warning</span>,
+              <span class="color-secondary">badge-error</span>,
+              <span class="color-secondary">badge-info</span>,
+              <span class="color-secondary">badge-success</span>.
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div>
+                  <h1>heading1 <span class="badge badge-primary">New</span></h1>
+                  <h2>
+                    heading2
+                    <span class="badge badge-secondary badge-round">New</span>
+                  </h2>
+                  <h3>heading3 <span class="badge badge-warning">New</span></h3>
+                  <h4>
+                    heading4
+                    <span class="badge badge-error badge-round">New</span>
+                  </h4>
+                  <h5>heading5 <span class="badge badge-info">New</span></h5>
+                  <h5>
+                    heading5
+                    <span class="badge badge-disable badge-round">New</span>
+                  </h5>
+                  <h6>heading6 <span class="badge badge-success">New</span></h6>
+                  <p>para text <span class="badge badge-round">New</span></p>
+                  <br />
+                  <button class="button button-info">
+                    Button
+                    <span class="badge badge-secondary badge-round">4</span>
+                  </button>
+                  <br />
+                  <br />
+                  <button class="button button-primary relative">
+                    Button one plus
+                    <span class="badge badge-error badge-round badge-top"
+                      >99+</span
+                    >
+                  </button>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div>
+  <h1>heading1 <span class="badge badge-primary">New</span></h1>
+  <h2>
+    heading2
+    <span class="badge badge-secondary badge-round">New</span>
+  </h2>
+  <h3>heading3 <span class="badge badge-warning">New</span></h3>
+  <h4>
+    heading4
+    <span class="badge badge-error badge-round">New</span>
+  </h4>
+  <h5>heading5 <span class="badge badge-info">New</span></h5>
+  <h5>
+    heading5
+    <span class="badge badge-disable badge-round">New</span>
+  </h5>
+  <h6>heading6 <span class="badge badge-success">New</span></h6>
+  <p>para text <span class="badge badge-round">New</span></p>
+  <br />
+  <button class="button button-info">
+    Button
+    <span class="badge badge-secondary badge-round">4</span>
+  </button>
+  <br />
+  <br />
+  <button class="button button-primary relative">
+    Button one plus
+    <span class="badge badge-error badge-round badge-top"
+      >99+</span
+    >
+  </button>
+</div>
+                  </script></code></pre>
+              </div>
+            </div>
+          </section>
+          <!-- Buttons -->
+          <section id="buttons" class="p-4">
+            <h2 class="text-secondary">Buttons</h2>
+            <h5 class="text-lighter">
+              Buttons make it possible for users to interact with a system and
+              take action by making selections.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <h5>Solid Buttons</h5>
+              <p>Buttons are provided with different variations as follows</p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <button class="button button-primary m-1">Primary</button>
+                <button class="button button-secondary m-1">secondary</button>
+                <button class="button button-success m-1">success</button>
+                <button class="button button-warning m-1">warning</button>
+                <button class="button button-info m-1">info</button>
+                <button class="button button-error m-1">error</button>
+                <button class="button button-monochrome m-1">monochrome</button>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<button class="button button-primary m-1">Primary</button>
+<button class="button button-secondary m-1">secondary</button>
+<button class="button button-success m-1">success</button>
+<button class="button button-warning m-1">warning</button>
+<button class="button button-info m-1">info</button>
+<button class="button button-error m-1">error</button>
+<button class="button button-monochrome m-1">monochrome</button>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <h5>Outlined and Light buttons</h5>
+              <p>
+                Outline and Light Buttons are medium and less emphasis button
+                variations. This can achieved by adding suffix
+                <span class="text-secondary">outlined</span> and
+                <span class="text-secondary">light</span> to the respective
+                button classes.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <button class="button button-primary-outlined m-1">
+                  Primary
+                </button>
+                <button class="button button-secondary-light m-1">
+                  secondary
+                </button>
+                <button class="button button-success-outlined m-1">
+                  success
+                </button>
+                <button class="button button-warning-light m-1">warning</button>
+                <button class="button button-info-outlined m-1">info</button>
+                <button class="button button-error-light m-1">error</button>
+                <button class="button button-monochrome-outlined m-1">
+                  monochrome
+                </button>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<button class="button button-primary-outlined m-1">
+  Primary
+</button>
+<button class="button button-secondary-light m-1">
+  secondary
+</button>
+<button class="button button-success-outlined m-1">
+  success
+</button>
+<button class="button button-warning-light m-1">warning</button>
+<button class="button button-info-outlined m-1">info</button>
+<button class="button button-error-light m-1">error</button>
+<button class="button button-monochrome-outlined m-1">
+  monochrome
+</button>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <h5>Disabled buttons</h5>
+              <p>
+                Buttons on which disabled attribute is on will look like as
+                following:
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <button class="button button-primary m-1" disabled>
+                  Primary
+                </button>
+                <button class="button button-secondary m-1" disabled>
+                  secondary
+                </button>
+                <button class="button button-success m-1" disabled>
+                  success
+                </button>
+                <button class="button button-primary-outlined" disabled>
+                  Primary
+                </button>
+                <button class="button button-secondary-outlined" disabled>
+                  secondary
+                </button>
+                <button class="button button-success-outlined" disabled>
+                  success
+                </button>
+
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<button class="button button-primary m-1" disabled>
+  Primary
+</button>
+<button class="button button-secondary m-1" disabled>
+  secondary
+</button>
+<button class="button button-success m-1" disabled>
+  success
+</button>
+<button class="button button-primary-outlined" disabled>
+  Primary
+</button>
+<button class="button button-secondary-outlined" disabled>
+  secondary
+</button>
+<button class="button button-success-outlined" disabled>
+  success
+</button>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <h5>Floating action buttons</h5>
+              <p>
+                Floating action buttons are the most prominent call to action
+                buttons on the viewport.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <button class="button button-float-primary m-1">
+                  <span class="iconify" data-icon="bx:plus"></span>
+                </button>
+                <button class="button button-float-secondary m-1">
+                  <span class="iconify" data-icon="ci:edit"></span>
+                </button>
+                <pre class="pre-code">
+                    <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<button class="button button-float-primary">
+  <span class="iconify" data-icon="bx:plus"></span>
+</button>
+<button class="button button-float-secondary">
+  <span class="iconify" data-icon="ci:edit"></span>
+</button>
+                    </script></code>
+                  </pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <h5>Different Sized Buttons</h5>
+              <p>Buttons are provided with different sizes as well</p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <button class="button button-secondary button-lg">
+                  secondary
+                </button>
+                <button class="button button-success">success</button>
+                <button class="button button-warning button-sm">warning</button>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<button class="button button-secondary button-lg">secondary</button>
+<button class="button button-success">success</button>
+<button class="button button-warning button-sm">warning</button>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Cards -->
+          <section id="cards" class="p-4">
+            <h2 class="text-secondary">Cards</h2>
+            <h5 class="text-lighter">
+              Cards can be used for a variety of use cases but the most
+              prominent use case of cards is for displaying various products or
+              items in a compact manner with all the details.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <p>
+              Cards are primarily divided into 3 parts:
+              <span class="text-secondary">card-img</span>,
+              <span class="text-secondary">card-body</span> and
+              <span class="text-secondary">card-footer</span>.
+            </p>
+            <div class="p-1-y">
+              <h5>Vertical Card</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div style="width: 15rem">
+                  <div class="card card-vertical">
+                    <div class="card-img">
+                      <div class="image-header">
+                        <h5>Image Header</h5>
+                      </div>
+                      <img src="../assets/businessman-avatar.jpg" alt="logo" />
+                    </div>
+                    <div class="card-body">
+                      <div class="card-title">Title</div>
+                      <div class="card-subtitle">Sub-title</div>
+                      <div class="card-content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </p>
+                      </div>
+                      <div class="card-footer flex-col">
+                        <button class="button button-primary full-width m-1">
+                          ADD
+                        </button>
+                        <button
+                          class="button button-primary-outlined full-width"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="card card-vertical">
+  <div class="card-img">
+    <div class="image-header">
+      <h5>Image Header</h5>
+    </div>
+    <img src="../assets/businessman-avatar.jpg" alt="logo" />
+  </div>
+  <div class="card-body">
+    <div class="card-title">Title</div>
+    <div class="card-subtitle">Sub-title</div>
+    <div class="card-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua.
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="button button-primary full-width">ADD</button>
+    </div>
+  </div>
+</div>
+                  </script></code>
+                  </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Horizontal Card</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="horizontal-card">
+                  <div class="card card-horizontal">
+                    <div class="card-img">
+                      <img src="../assets/businessman-avatar.jpg" alt="logo" />
+                    </div>
+                    <div class="card-body">
+                      <div class="card-title">Title</div>
+                      <div class="card-subtitle">Sub-title</div>
+                      <div class="card-content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco
+                        </p>
+                      </div>
+                      <div class="card-footer">
+                        <button class="button button-secondary">ADD</button>
+                        <h4 style="margin-left: auto">
+                          <span
+                            class="iconify"
+                            data-icon="bi:share-fill"
+                          ></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="card card-vertical">
+  <div class="card-img">
+    <div class="image-header">
+      <h5>Image Header</h5>
+    </div>
+    <img src="../assets/businessman-avatar.jpg" alt="logo" />
+  </div>
+  <div class="card-body">
+    <div class="card-title">Title</div>
+    <div class="card-subtitle">Sub-title</div>
+    <div class="card-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua.
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="button button-primary full-width">ADD</button>
+    </div>
+  </div>
+</div>
+                  </script></code>
+                  </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Text Only Card</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div style="width: 15rem">
+                  <div class="card card-vertical">
+                    <div class="card-body">
+                      <div class="card-title">Title</div>
+                      <div class="card-subtitle">Sub-title</div>
+                      <div class="card-content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Ut enim ad minim veniam, quis nostrud
+                          exercitation ullamco
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna ali
+                        </p>
+                      </div>
+                      <div class="card-footer">
+                        <button class="card-btn">ADD</button>
+                        <h4 style="margin-left: auto">
+                          <span
+                            class="iconify"
+                            data-icon="bi:share-fill"
+                          ></span>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="card card-vertical">
+  <div class="card-body">
+    <div class="card-title">Title</div>
+    <div class="card-subtitle">Sub-title</div>
+    <div class="card-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna ali
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="card-btn">ADD</button>
+      <h4 style="margin-left: auto">
+        <span
+          class="iconify"
+          data-icon="bi:share-fill"
+        ></span>
+      </h4>
+    </div>
+  </div>
+</div>
+                  </script></code>
+                  </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Card width Badge and dismiss</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div style="width: 15rem">
+                  <div class="card card-vertical">
+                    <div class="card-badge">#Bestseller</div>
+                    <div class="card-dismiss"></div>
+                    <div class="card-img">
+                      <img src="../assets/businessman-avatar.jpg" alt="logo" />
+                    </div>
+                    <div class="card-body">
+                      <div class="card-title">Title</div>
+                      <div class="card-subtitle">Sub-title</div>
+                      <div class="card-content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </p>
+                      </div>
+                      <div class="card-footer flex-col">
+                        <button class="button button-primary full-width m-1">
+                          ADD
+                        </button>
+                        <button
+                          class="button button-primary-outlined full-width"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="card card-vertical">
+  <div class="card-badge">#Bestseller</div>
+  <div class="card-dismiss"></div>
+  <div class="card-img">
+    <img src="../assets/businessman-avatar.jpg" alt="logo" />
+  </div>
+  <div class="card-body">
+    <div class="card-title">Title</div>
+    <div class="card-subtitle">Sub-title</div>
+    <div class="card-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua.
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="button button-primary full-width">ADD</button>
+    </div>
+  </div>
+</div>
+                  </script></code>
+                  </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Card with text overlay</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div style="width: 15rem">
+                  <div class="card card-vertical">
+                    <div class="text-overlay">
+                      <h3>Out of stock</h3>
+                    </div>
+                    <div class="card-img">
+                      <div class="image-header">
+                        <h5>Image Header</h5>
+                      </div>
+                      <img src="../assets/businessman-avatar.jpg" alt="logo" />
+                    </div>
+                    <div class="card-body">
+                      <div class="card-title">Title</div>
+                      <div class="card-subtitle">Sub-title</div>
+                      <div class="card-content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </p>
+                      </div>
+                      <div class="card-footer flex-col">
+                        <button class="button button-primary full-width m-1">
+                          ADD
+                        </button>
+                        <button
+                          class="button button-primary-outlined full-width"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="card card-vertical">
+  <div class="card-img">
+    <div class="image-header">
+      <h5>Image Header</h5>
+    </div>
+    <img src="../assets/businessman-avatar.jpg" alt="logo" />
+  </div>
+  <div class="card-body">
+    <div class="card-title">Title</div>
+    <div class="card-subtitle">Sub-title</div>
+    <div class="card-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua.
+      </p>
+    </div>
+    <div class="card-footer">
+      <button class="button button-primary full-width">ADD</button>
+    </div>
+  </div>
+</div>
+                  </script></code>
+                  </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Images -->
+          <section id="images" class="p-4">
+            <h2 class="text-secondary">Images</h2>
+            <h5 class="text-lighter">
+              Images can be used as responsive images which will adjust
+              according to the parent's width or round/circular images.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <h5>Responsive Images</h5>
+              <p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div>
+                  <img
+                    class="img-responsive"
+                    src="https://picsum.photos/800/300"
+                    alt="img"
+                  />
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div>
+  <img
+    class="img-responsive"
+    src="https://picsum.photos/800/300"
+    alt="img"
+  />
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Circular Images</h5>
+              <p>
+                For perfectly circular images give the image square dimesions
+                i.e. euqal widht and height. You can also use class
+                <span class="text-secondary">cover</span> in combination with
+                parent elements dimensions to achieve the same layout.
+              </p>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div>
+                  <img
+                    class="img-round img-responsive cover"
+                    src="https://picsum.photos/300"
+                    alt="img"
+                  />
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div>
+  <img
+    class="img-round img-responsive cover"
+    src="https://picsum.photos/300"
+    alt="img"
+  />
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Inputs -->
+          <section id="inputs" class="p-4">
+            <h2 class="text-secondary">Inputs</h2>
+            <h5 class="text-lighter">
+              Input fields are used to create interactive controls for web-based
+              forms in order to accept data from the user.
+            </h5>
+            <div class="p-1-y">
+              <p>
+                Inputs fields are represented as groups using class
+                <span class="color-secondary">input-group</span>. Text can be
+                suffixed or prefixed using
+                <span class="color-secondary">input-title</span>.
+              </p>
+              <p>
+                For checkbox and radio inputs classes
+                <span class="color-secondary">check-input</span> and
+                <span class="color-secondary">radio-input</span> should be used
+                for input fields. Similiary for displaying error or success
+                state <span class="color-secondary">error-input</span> and
+                <span class="color-secondary">success-input</span> should be
+                used.
+              </p>
+            </div>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div>
+                  <label class="input-label">Label Text1</label>
+                  <div class="input-group">
+                    <input
+                      class="text-input"
+                      type="text"
+                      placeholder="Enter text..."
+                    />
+                  </div>
+                  <label class="input-label">Label Text2</label>
+                  <div class="input-group">
+                    <div class="input-title">First Name</div>
+                    <input
+                      class="text-input"
+                      type="text"
+                      placeholder="Enter FirstName..."
+                    />
+                  </div>
+                  <label class="input-label">Label Text3</label>
+                  <div class="input-group">
+                    <input
+                      class="text-input"
+                      type="text"
+                      placeholder="Enter email..."
+                    />
+                    <div class="input-title">@gmail.com</div>
+                  </div>
+                  <label class="input-label">Label Text4- Error state</label>
+                  <div class="input-group">
+                    <input
+                      class="text-input error-input"
+                      type="text"
+                      placeholder="Invalid entry"
+                    />
+                  </div>
+                  <label class="input-label">Label Text5- Success Input</label>
+                  <div class="input-group">
+                    <div class="input-title">First Name</div>
+                    <input class="text-input success-input" type="text" />
+                    <div class="input-title">@gmail.com</div>
+                  </div>
+                  <label class="input-label">Label Text6- Disabled</label>
+                  <div class="input-group">
+                    <div class="input-title">First Name</div>
+                    <input class="text-input" type="text" disabled />
+                  </div>
+                  <label class="input-label">Label Text7</label>
+                  <div class="input-group">
+                    <input
+                      class="check-input"
+                      type="checkbox"
+                      placeholder="Disabled"
+                    />
+                    <div class="input-check-title p-1-x">Checkbox</div>
+                  </div>
+                  <label class="input-label">Label Text8</label>
+                  <div class="input-group">
+                    <input class="radio-input" name="radio-btn" type="radio" />
+                    <div class="p-1-x">Radio Button 1</div>
+                    <input class="radio-input" name="radio-btn" type="radio" />
+                    <div class="p-1-x">Radio Button 2</div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div>
+  <label class="input-label">Label Text1</label>
+  <div class="input-group">
+    <input class="text-input" type="text" placeholder="Enter text..."/>
+  </div>
+
+  <label class="input-label">Label Text2</label>
+  <div class="input-group">
+    <div class="input-title">First Name</div>
+    <input class="text-input" type="text" placeholder="Enter FirstName..."/>
+  </div>
+
+  <label class="input-label">Label Text3</label>
+  <div class="input-group">
+    <input class="text-input" type="text" placeholder="Enter email..."/>
+    <div class="input-title">@gmail.com</div>
+  </div>
+
+  <label class="input-label">Label Text4- Error state</label>
+  <div class="input-group">
+    <input class="text-input error-input" type="text" placeholder="Invalid entry"/>
+  </div>
+
+  <label class="input-label">Label Text5- Success Input</label>
+  <div class="input-group">
+    <div class="input-title">First Name</div>
+    <input class="text-input success-input" type="text" />
+    <div class="input-title">@gmail.com</div>
+  </div>
+
+  <label class="input-label">Label Text6- Disabled</label>
+  <div class="input-group">
+    <div class="input-title">First Name</div>
+    <input class="text-input" type="text" disabled />
+  </div>
+
+  <label class="input-label">Label Text7</label>
+  <div class="input-group">
+    <input class="check-input" type="checkbox" placeholder="Disabled"/>
+    <div class="input-check-title p-1-x">Checkbox</div>
+  </div>
+
+  <label class="input-label">Label Text8</label>
+  <div class="input-group">
+    <input class="radio-input" name="radio-btn" type="radio" />
+    <div class="p-1-x">Radio Button 1</div>
+    <input class="radio-input" name="radio-btn" type="radio" />
+    <div class="p-1-x">Radio Button 2</div>
+  </div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Layout -->
+          <section id="layout" class="p-4">
+            <h2 class="text-secondary">Grid Layout</h2>
+            <h5 class="text-lighter">
+              The responsive Grid layout adapts to various screen sizes and
+              orientation,
+            </h5>
+            <div class="p-1-y">
+              <p>
+                Parent container must have class
+                <span class="text-secondary">grid-col</span> to achieve the
+                desired layout. The total width of layout is divide into six
+                equal imaginary width spaces. Each column can take width of any
+                number of spaces by using class
+                <span class="text-secondary">col-'space'</span>.
+              </p>
+              <p>
+                For devices/screens less than or equal to 600px view port width
+                class <span class="text-secondary">col-'space'-sm</span> should
+                be used. And similiary class
+                <span class="text-secondary">col-'space'-md</span> can be used
+                for less than or equal to 768px view port width screens.
+              </p>
+              <div class="p-2">
+                <ul class="type-none">
+                  Width spaces are as follows:
+                  <li>col-1</li>
+                  <li>col-2</li>
+                  <li>col-3</li>
+                  <li>col-4</li>
+                  <li>col-5</li>
+                  <li>col-6</li>
+                </ul>
+              </div>
+            </div>
+            <h4 class="p-1-y">Examples</h4>
+            <h5>Grid Columns</h5>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="grid-col m-2">
+                  <div class="sample-block col-6 col-6-md col-6-sm">col-6</div>
+                  <div class="sample-block col-3 col-3-md col-3-sm">col-3</div>
+                  <div class="sample-block col-3 col-3-md col-3-sm">col-3</div>
+                  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+                  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+                  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="grid-col m-2">
+  <div class="sample-block col-6 col-6-md col-6-sm">col-6</div>
+  <div class="sample-block col-3 col-3-md col-3-sm">col-3</div>
+  <div class="sample-block col-3 col-3-md col-3-sm">col-3</div>
+  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+  <div class="sample-block col-2 col-2-md col-2-sm">col-2</div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+            <h5 class="p-1-y">Dynamic Grid Columns</h5>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="grid-col m-2">
+                  <div class="sample-block col-1 col-1-md col-6-sm">
+                    col-1 col-1-md col-6-sm
+                  </div>
+                  <div class="sample-block col-2 col-2-md col-6-sm">
+                    col-2 col-2-md col-6-sm
+                  </div>
+                  <div class="sample-block col-3 col-2-md col-6-sm">
+                    col-3 col-2-md col-6-sm
+                  </div>
+                  <div class="sample-block col-5 col-1-md col-6-sm">
+                    col-3 col-2-md col-6-sm
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="grid-col m-2">
+  <div class="sample-block col-1 col-1-md col-6-sm">col-1 col-1-md col-6-sm</div>
+  <div class="sample-block col-2 col-2-md col-6-sm">col-2 col-2-md col-6-sm</div>
+  <div class="sample-block col-3 col-2-md col-6-sm">col-3 col-2-md col-6-sm</div>
+  <div class="sample-block col-5 col-1-md col-6-sm">col-3 col-2-md col-6-sm</div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Lists -->
+          <section id="lists" class="p-4">
+            <h2 class="text-secondary">Lists</h2>
+            <h5 class="text-lighter">
+              Lists are a continuous group of content for displaying a variety
+              of content in a vertical order.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <h5>Unorderd Basic list</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ul class="list-group type-none">
+                    <li class="list-item active">First item</li>
+                    <li class="list-item">Second item</li>
+                    <li class="list-item">Third item</li>
+                    <li class="list-item">Fourth item</li>
+                    <li class="list-item">Sixth item</li>
+                    <li class="list-item disable">Seventh item</li>
+                  </ul>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ul class="list-group type-none">
+  <li class="list-item active">First item</li>
+  <li class="list-item">Second item</li>
+  <li class="list-item">Third item</li>
+  <li class="list-item">Fourth item</li>
+  <li class="list-item">Sixth item</li>
+  <li class="list-item disable">Seventh item</li>
+</ul>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Unorderd Spaced and Bordered list</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ul class="list-group bordered items-p-4">
+                    <li class="list-item active">First item</li>
+                    <li class="list-item">Second item</li>
+                    <li class="list-item">Third item</li>
+                    <li class="list-item">Fourth item</li>
+                    <li class="list-item">Sixth item</li>
+                    <li class="list-item disable">Seventh item</li>
+                  </ul>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ul class="list-group bordered items-p-4">
+  <li class="list-item active">First item</li>
+  <li class="list-item">Second item</li>
+  <li class="list-item">Third item</li>
+  <li class="list-item">Fourth item</li>
+  <li class="list-item">Sixth item</li>
+  <li class="list-item disable">Seventh item</li>
+</ul>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Ordered list</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ol class="list-group bordered items-p-3 type-roman-lower">
+                    <li class="list-item">First item</li>
+                    <li class="list-item active">Second item</li>
+                    <li class="list-item">Third item</li>
+                    <li class="list-item disable">Fourth item</li>
+                    <li class="list-item">Sixth item</li>
+                    <li class="list-item">Seventh item</li>
+                  </ol>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ol class="list-group bordered items-p-3 type-roman-lower">
+  <li class="list-item">First item</li>
+  <li class="list-item active">Second item</li>
+  <li class="list-item">Third item</li>
+  <li class="list-item disable">Fourth item</li>
+  <li class="list-item">Sixth item</li>
+  <li class="list-item">Seventh item</li>
+</ol>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Stacked ordered list</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ol class="list-group bordered items-p-4 type-roman-lower">
+                    <li class="list-item">
+                      <div class="list-content">
+                        <div class="flex-row">
+                          <img
+                            src="https://picsum.photos/100/80"
+                            style="max-width: 100%; height: auto"
+                            alt="img"
+                          />
+                          <div class="p-1-x">
+                            <h4>First Stack</h4>
+                            <p>lorem ofn fg jfdgjfjgk jdfk</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <div class="list-content">
+                        <div class="flex-row">
+                          <img
+                            src="https://picsum.photos/100/80"
+                            style="max-width: 100%; height: auto"
+                            alt="img"
+                          />
+                          <div class="p-1-x">
+                            <h4>Second Stack</h4>
+                            <p>lorem ofn fg jfdgjfjgk jdfk</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="list-item">
+                      <div class="list-content">
+                        <div class="flex-row">
+                          <img
+                            src="https://picsum.photos/100/80"
+                            style="max-width: 100%; height: auto"
+                            alt="img"
+                          />
+                          <div class="p-1-x">
+                            <h4>Third Stack</h4>
+                            <p>lorem ofn fg jfdgjfjgk jdfk</p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ol class="list-group bordered items-p-4 type-roman-lower">
+  <li class="list-item">
+    <div class="list-content">
+      <div class="flex-row">
+        <img
+          src="https://picsum.photos/100/80"
+          style="max-width: 100%; height: auto"
+          alt="img"
+        />
+        <div class="p-1-x">
+          <h4>First Stack</h4>
+          <p>lorem ofn fg jfdgjfjgk jdfk</p>
+        </div>
+      </div>
+      
+    </div>
+  </li>
+  <li class="list-item">
+    <div class="list-content">
+      <div class="flex-row">
+        <img
+          src="https://picsum.photos/100/80"
+          style="max-width: 100%; height: auto"
+          alt="img"
+        />
+        <div class="p-1-x">
+          <h4>Second Stack</h4>
+          <p>lorem ofn fg jfdgjfjgk jdfk</p>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="list-item">
+    <div class="list-content">
+      <div class="flex-row">
+        <img
+          src="https://picsum.photos/100/80"
+          style="max-width: 100%; height: auto"
+          alt="img"
+        />
+        <div class="p-1-x">
+          <h4>Third Stack</h4>
+          <p>lorem ofn fg jfdgjfjgk jdfk</p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ol>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+
+            <div class="p-1-y">
+              <h5>Items Differentiation</h5>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="responsive-width">
+                  <ol class="list-group items-p-3 type-alpha-lower">
+                    <li class="list-item item-primary">First item</li>
+                    <li class="list-item item-secondary">Second item</li>
+                    <li class="list-item item-warning">Third item</li>
+                    <li class="list-item item-error">Fourth item</li>
+                    <li class="list-item item-success">Sixth item</li>
+                    <li class="list-item">Seventh item</li>
+                  </ol>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<ol class="list-group items-p-3 type-alpha-lower">
+  <li class="list-item item-primary">First item</li>
+  <li class="list-item item-secondary">Second item</li>
+  <li class="list-item item-warning">Third item</li>
+  <li class="list-item item-error">Fourth item</li>
+  <li class="list-item item-success">Sixth item</li>
+  <li class="list-item">Seventh item</li>
+</ol>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Modal -->
+          <section id="modal" class="p-4">
+            <h2 class="text-secondary">Modal</h2>
+            <h5 class="text-lighter">
+              A modal is a dialog box/popup window that is displayed on top of
+              the current page to pause the flow of the document and highlight
+              important content.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
+              <p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p> -->
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div>
+                  <div class="modal-box">
+                    <div class="modal-header">
+                      <h3>Modal Header</h3>
+                      <div class="btn-dismiss">x</div>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat.
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="btn">Button</div>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Modal Header</h3>
+      <div class="btn-dismiss">x</div>
+    </div>
+    <div class="modal-body">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <div class="btn">Button</div>
+    </div>
+  </div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+            <div class="p-1-y">
+              <h4>Live Example</h4>
+              <div class="button button-secondary" onclick="modalPopup()">
+                See Modal
+              </div>
+              <pre class="pre-code">
+                <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="modal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Modal Header</h3>
+      <div class="btn-dismiss" onclick="modalDismiss()">x</div>
+    </div>
+    <div class="modal-body">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <div class="btn" onclick="modalDismiss()">Close</div>
+    </div>
+  </div>
+</div>
+
+<div class="button button-secondary" onclick="modalPopup()">
+  See Modal
+</div>
+
+<JAVASCRIPT-CODE>
+function modalPopup(){
+  const modal=document.querySelector('.modal')
+  modal.style.display='block'
+}
+function modalDismiss(){
+  const modal=document.querySelector('.modal')
+  modal.style.display='none'
+}
+                </script></code>
+            </pre>
+            </div>
+          </section>
+          <!-- Navbar -->
+          <section id="navbar" class="p-4">
+            <h2 class="text-secondary">NavBar</h2>
+            <h5 class="text-lighter">
+              Navbar represents the section of the page where all major
+              navigation links are present along with header for primary
+              information and logo. It is primarily presented on the top of the
+              page.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
+              <p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p> -->
+            </div>
+            <div class="navbar badge-secondary">
+              <input id="menu-icon" type="checkbox" />
+              <label class="menu-label" for="menu-icon"></label>
+              <div class="nav-brand">
+                <img src="./assets/logoipsum-logo-17.svg" alt="logo" />
+              </div>
+              <div class="nav-content">
+                <h3>Navbar</h3>
+                <p>Text</p>
+                <div class="submenu">
+                  <input id="submenu-input" type="checkbox" />
+                  <label for="submenu-input" class="submenu-text">
+                    Submenu
+                  </label>
+                  <ul>
+                    <li>Option 1</li>
+                    <li>Option 12</li>
+                    <li>Option 123</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="nav-end">
+                <button class="nav-btn">Button</button>
+              </div>
+            </div>
+            <div class="p-4-y"></div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="navbar badge-secondary">
+  <input id="menu-icon" type="checkbox" />
+  <label class="menu-label" for="menu-icon"></label>
+  <div class="nav-brand">
+    <img src="./assets/logoipsum-logo-17.svg" alt="logo" />
+  </div>
+  <div class="nav-content">
+    <h3>Navbar</h3>
+    <p>Text</p>
+    <div class="submenu">
+      <input id="submenu-input" type="checkbox" />
+      <label for="submenu-input" class="submenu-text">
+        Submenu
+      </label>
+      <ul>
+        <li>Option 1</li>
+        <li>Option 12</li>
+        <li>Option 123</li>
+      </ul>
+    </div>
+  </div>
+  <div class="nav-end">
+    <button class="nav-btn">Button</button>
+  </div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Ratings -->
+          <section id="ratings" class="p-4">
+            <h2 class="text-secondary">Ratings</h2>
+            <h5 class="text-lighter">
+              Rating are primarily used to represent the feedback and opinions
+              of users in form of data insights.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
+              <p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p> -->
+            </div>
+            <div class="p-4-y"></div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="flex-row" style="justify-content: space-around">
+                  <p>Ratings 1:</p>
+                  <div class="rating-container">
+                    <label class="rating-label active-rating">
+                      <span class="star-icon active-rating"></span
+                    ></label>
+                    <label for="rate2" class="rating-label active-rating">
+                      <span class="star-icon"></span
+                    ></label>
+                    <label for="rate3" class="rating-label active-rating">
+                      <span class="star-icon"></span>
+                    </label>
+                    <label for="rate3" class="rating-label">
+                      <span class="star-icon"></span>
+                    </label>
+                    <label for="rate3" class="rating-label">
+                      <span class="star-icon"></span>
+                    </label>
+                  </div>
+                  <p>Ratings 2:</p>
+                  <div class="rating-container">
+                    <label class="rating-label active-rating">
+                      <span class="heart-icon active-rating"></span
+                    ></label>
+                    <label for="rate2" class="rating-label active-rating">
+                      <span class="heart-icon"></span
+                    ></label>
+                    <label for="rate3" class="rating-label active-rating">
+                      <span class="heart-icon"></span>
+                    </label>
+                    <label for="rate3" class="rating-label active-rating">
+                      <span class="heart-icon"></span>
+                    </label>
+                    <label for="rate3" class="rating-label">
+                      <span class="heart-icon"></span>
+                    </label>
+                  </div>
+
+                  <p>Ratings Badge:</p>
+                  <div class="rating-badge">
+                    <label class="rating-label active-rating">
+                      5<span class="star-icon active-rating"></span>| 5</label
+                    >
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<p>Ratings 1:</p>
+<div class="rating-container">
+  <label class="rating-label active-rating">
+    <span class="star-icon active-rating"></span
+  ></label>
+  <label for="rate2" class="rating-label active-rating">
+    <span class="star-icon"></span
+  ></label>
+  <label for="rate3" class="rating-label active-rating">
+    <span class="star-icon"></span>
+  </label>
+  <label for="rate3" class="rating-label">
+    <span class="star-icon"></span>
+  </label>
+  <label for="rate3" class="rating-label">
+    <span class="star-icon"></span>
+  </label>
+</div>
+
+<p>Ratings 2:</p>
+<div class="rating-container">
+  <label class="rating-label active-rating">
+    <span class="heart-icon active-rating"></span
+  ></label>
+  <label for="rate2" class="rating-label active-rating">
+    <span class="heart-icon"></span
+  ></label>
+  <label for="rate3" class="rating-label active-rating">
+    <span class="heart-icon"></span>
+  </label>
+  <label for="rate3" class="rating-label active-rating">
+    <span class="heart-icon"></span>
+  </label>
+  <label for="rate3" class="rating-label">
+    <span class="heart-icon"></span>
+  </label>
+</div>
+  
+<p>Ratings Badge:</p>
+                    <div class="rating-badge">
+  <label class="rating-label active-rating">
+    5<span class="star-icon active-rating"></span>| 5</label
+  >
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+          <!-- Toast -->
+          <section id="toast" class="p-4">
+            <h2 class="text-secondary">Toast/Snackbar</h2>
+            <h5 class="text-lighter">
+              Toasts or Snackbar are used to notify the user about any event
+              during the user interaction. It can appear/disappear without user
+              input. It does not interfare with the user interaction.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+              <!-- <h5>Responsive Images</h5>
+              <p>
+                Use class <span class="text-secondary">img-responsive</span> to
+                give the image responsiveness. In addition to that classes
+                <span class="text-secondary">cover</span> and
+                <span class="text-secondary">contain</span> can also be used for
+                the object-fit property.
+              </p> -->
+            </div>
+            <div class="p-4-y"></div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="toast toast-primary" style="width: 300px">
+                  <div class="toast-content">
+                    <p>Toast Example. Variation-primary</p>
+                  </div>
+                  <div class="toast-dismiss">
+                    <span class="iconify" data-icon="charm:cross"></span>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="toast toast-primary" style="width: 60vw;">
+  <div class="toast-content">
+    <h4>Toast Text lorem ipsum</h4>
+  </div>
+  <div class="toast-dismiss">
+    <span class="iconify" data-icon="charm:cross"></span>
+  </div>
+</div>
+              </script></code>
+                </pre>
+              </div>
+            </div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <h4>Live Example</h4>
+                <div class="button button-secondary" onclick="toastPopup()()">
+                  See Toast
+                </div>
+                <div class="toast-example">
+                  <div class="toast-example toast toast-error position-bottom">
+                    <div class="toast-content">
+                      <p>Toast Example. Variation-error</p>
+                    </div>
+                    <div class="toast-dismiss" onclick="toastDismiss()">
+                      <span class="iconify" data-icon="charm:cross"></span>
+                    </div>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                  <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="toast-example">
+  <div class="toast-example toast toast-error position-bottom">
+    <div class="toast-content">
+      <p>Toast Example. Variation-error</p>
+    </div>
+    <div class="toast-dismiss" onclick="toastDismiss()">
+      <span class="iconify" data-icon="charm:cross"></span>
+    </div>
+  </div>
+</div>
+
+<JAVASCRIPT-CODE>
+function toastPopup(){
+  const toast=document.querySelector('.toast-example')
+  toast.style.display='block'
+}
+function toastDismiss(){
+  const toast=document.querySelector('.toast-example')
+  toast.style.display='none'
+}
+              </script></code>
+                </pre>
+              </div>
+            </div>
+          </section>
+
+          <section id="typography" class="p-4">
+            <h2 class="text-secondary">Typography</h2>
+            <h5 class="text-lighter">
+              Crux-ui provides various variations of typography to present your
+              content in a clear manner.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="p-1-y">
+            </div>
+            <div class="p-4-y"></div>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="grid-col">
+                  <div class="col-2 col-2-md col-6-sm">
+                    <div class="banner1">b1.Banner</div>
+                    <div class="banner2">b2.Banner</div>
+                    <div class="banner3">b3.Banner</div>
+                    <div class="banner4">b4.Banner</div>
+                    <div class="banner5">b5.Banner</div>
+                    <div class="banner6">b6.Banner</div>
+                  </div>
+                  <div class="col-2 col-2-md col-6-sm">
+                    <div class="h1">h1.Heading</div>
+                    <div class="h2">h2.Heading</div>
+                    <div class="h3">h3.Heading</div>
+                    <div class="h4">h4.Heading</div>
+                    <div class="h5">h5.Heading</div>
+                    <div class="h6">h6.Heading</div>
+                  </div>
+                  <div class="col-2 col-2-md col-6-sm">
+                    <p class="text-primary">text-primary</p>
+                    <p class="text-secondary">text-secondary</p>
+                    <p class="text-info">text-info</p>
+                    <p class="text-error">text-error</p>
+                    <p class="text-disable">text-disable</p>
+                    <p class="text-warning">text-warning</p>
+                    <p>text-normal</p>
+                    <p class="text-monospace">text-monospace</p>
+                    <p class="text-condensed">text-condensed</p>
+                    <p class="text-small">text-small</p>
+                    <p class="text-center">text-center</p>
+                  </div>
+                </div>
+                <pre class="pre-code">
+                      <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+<div class="grid-col">
+  <div class="col-2 col-2-md col-6-sm">
+    <div class="banner1">b1.Banner</div>
+    <div class="banner2">b2.Banner</div>
+    <div class="banner3">b3.Banner</div>
+    <div class="banner4">b4.Banner</div>
+    <div class="banner5">b5.Banner</div>
+    <div class="banner6">b6.Banner</div>
+  </div>
+  <div class="col-2 col-2-md col-6-sm">
+    <div class="h1">h1.Heading</div>
+    <div class="h2">h2.Heading</div>
+    <div class="h3">h3.Heading</div>
+    <div class="h4">h4.Heading</div>
+    <div class="h5">h5.Heading</div>
+    <div class="h6">h6.Heading</div>
+  </div>
+  <div class="col-2 col-2-md col-6-sm">
+      <p class="text-primary">text-primary</p>
+      <p class="text-secondary">text-secondary</p>
+      <p class="text-info">text-info</p>
+      <p class="text-error">text-error</p>
+      <p class="text-disable">text-disable</p>
+      <p class="text-warning">text-warning</p>
+      <p>text-normal</p>
+      <p class="text-monospace">text-monospace</p>
+      <p class="text-condensed">text-condensed</p>
+      <p class="text-small">text-small</p>
+      <p class="text-center">text-center</p>
+    </div>
+</div>
+                  </script></code>
+                    </pre>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="prism.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

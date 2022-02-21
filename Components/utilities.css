@@ -146,3 +146,15 @@
 .border-secondary{
   border: 1px solid var(--disable);
 }
+.bg-none{
+  background: none;
+}
+.align-center{
+  align-items: center;
+}
+.space-between{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+}

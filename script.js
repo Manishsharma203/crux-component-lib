@@ -16,7 +16,7 @@ const buttonsList = {
 };
 
 function firstButtonReady() {
-  const buttons = document.getElementsByClassName("button");
+  const buttons = document.querySelectorAll(".sidebar .button");
   buttons[0].setAttribute("class", "button button-primary full-width");
 }
 function selectComponent(event) {
@@ -79,4 +79,10 @@ function toastPopup(){
 function toastDismiss(){
   const toast=document.querySelector('.toast-example')
   toast.style.display='none'
+}
+
+function navbarToggle(){
+  const menuIcon=document.querySelector('#menu-icon')
+  menuIcon.checked = !menuIcon.checked;
+  // menu-icon
 }
