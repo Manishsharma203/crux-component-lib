@@ -33,7 +33,7 @@
         </div>
       </div>
       <!-- Navbar -->
-      <div class="navbar bg-light sticky p-2" style="z-index: 100">
+      <div class="navbar bg-light sticky p-2 zIndex-100">
         <input id="menu-icon" type="checkbox" />
         <label class="menu-label" for="menu-icon"></label>
         <div class="nav-brand">
@@ -178,6 +178,14 @@
                   <a href="#utilities"> Utilities </a>
                 </button>
               </li>
+              <li class="list-item">
+                <button
+                  class="button button-primary-light full-width"
+                  onclick="navbarToggle()"
+                >
+                  <a href="#slider"> Slider </a>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -305,6 +313,14 @@
                 onclick="selectComponent(event)"
               >
                 <a href="#utilities"> Utilities </a>
+              </button>
+            </li>
+            <li class="list-item">
+              <button
+                class="button button-primary-light full-width"
+                onclick="selectComponent(event)"
+              >
+                <a href="#slider"> Slider </a>
               </button>
             </li>
           </ul>
@@ -888,7 +904,7 @@ function alertDismiss(){
             </div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
-                <div style="width: 15rem">
+                <div class="card-wd-15">
                   <div class="card card-vertical">
                     <div class="card-img">
                       <div class="image-header">
@@ -977,7 +993,7 @@ function alertDismiss(){
                       </div>
                       <div class="card-footer">
                         <button class="button button-secondary">ADD</button>
-                        <h4 style="margin-left: auto">
+                        <h4 class="ml-auto">
                           <span
                             class="iconify"
                             data-icon="bi:share-fill"
@@ -1021,7 +1037,7 @@ function alertDismiss(){
             </div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
-                <div style="width: 15rem">
+                <div class="card-wd-15">
                   <div class="card card-vertical">
                     <div class="card-body">
                       <div class="card-title">Title</div>
@@ -1040,7 +1056,7 @@ function alertDismiss(){
                       </div>
                       <div class="card-footer">
                         <button class="card-btn">ADD</button>
-                        <h4 style="margin-left: auto">
+                        <h4 class="ml-auto">
                           <span
                             class="iconify"
                             data-icon="bi:share-fill"
@@ -1089,7 +1105,7 @@ function alertDismiss(){
             </div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
-                <div style="width: 15rem">
+                <div class="card-wd-15">
                   <div class="card card-vertical">
                     <div class="card-badge">#Bestseller</div>
                     <div class="card-dismiss"></div>
@@ -1152,7 +1168,7 @@ function alertDismiss(){
             </div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
-                <div style="width: 15rem">
+                <div class="card-wd-15">
                   <div class="card card-vertical">
                     <div class="text-overlay">
                       <h3>Out of stock</h3>
@@ -1636,7 +1652,7 @@ function alertDismiss(){
                         <div class="flex-row">
                           <img
                             src="https://picsum.photos/100/80"
-                            style="max-width: 100%; height: auto"
+                            class="list-img"
                             alt="img"
                           />
                           <div class="p-1-x">
@@ -1651,7 +1667,7 @@ function alertDismiss(){
                         <div class="flex-row">
                           <img
                             src="https://picsum.photos/100/80"
-                            style="max-width: 100%; height: auto"
+                            class="list-img"
                             alt="img"
                           />
                           <div class="p-1-x">
@@ -1666,7 +1682,7 @@ function alertDismiss(){
                         <div class="flex-row">
                           <img
                             src="https://picsum.photos/100/80"
-                            style="max-width: 100%; height: auto"
+                            class="list-img"
                             alt="img"
                           />
                           <div class="p-1-x">
@@ -1686,7 +1702,7 @@ function alertDismiss(){
       <div class="flex-row">
         <img
           src="https://picsum.photos/100/80"
-          style="max-width: 100%; height: auto"
+          class='full-width'
           alt="img"
         />
         <div class="p-1-x">
@@ -1702,7 +1718,7 @@ function alertDismiss(){
       <div class="flex-row">
         <img
           src="https://picsum.photos/100/80"
-          style="max-width: 100%; height: auto"
+          class='full-width'
           alt="img"
         />
         <div class="p-1-x">
@@ -1717,7 +1733,7 @@ function alertDismiss(){
       <div class="flex-row">
         <img
           src="https://picsum.photos/100/80"
-          style="max-width: 100%; height: auto"
+          class='full-width'
           alt="img"
         />
         <div class="p-1-x">
@@ -1980,7 +1996,7 @@ function modalDismiss(){
             <div class="p-4-y"></div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
-                <div class="flex-row" style="justify-content: space-around">
+                <div class="flex-row space-around">
                   <p>Ratings 1:</p>
                   <div class="rating-container">
                     <label class="rating-label active-rating">
@@ -2098,7 +2114,7 @@ function modalDismiss(){
             <div class="p-4-y"></div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
-                <div class="toast toast-primary" style="width: 300px">
+                <div class="toast toast-primary toast-doc">
                   <div class="toast-content">
                     <p>Toast Example. Variation-primary</p>
                   </div>
@@ -2108,7 +2124,7 @@ function modalDismiss(){
                 </div>
                 <pre class="pre-code">
                   <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
-<div class="toast toast-primary" style="width: 60vw;">
+<div class="toast toast-primary">
   <div class="toast-content">
     <h4>Toast Text lorem ipsum</h4>
   </div>
@@ -2340,6 +2356,33 @@ function toastDismiss(){
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </section>
+          <!-- Slider -->
+          <section id="slider" class="p-4">
+            <h2 class="text-secondary">Slider</h2>
+            <h5 class="text-lighter m-4-y">
+              Sliders or input elements of type range are used to take input
+              from users from a given range where values can be picked and
+              precision is not considered as important.This is typically
+              represented using a slider.
+            </h5>
+            <h4 class="p-1-y">Examples</h4>
+            <div class="grid-col">
+              <div class="col-6 border-secondary p-4">
+                <div class="m-4-y">
+                  <span class="iconify p-1-x" data-icon="el:volume-up"></span
+                  ><input class="slider" type="range" />
+                </div>
+                <pre class="pre-code">
+                    <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
+  <div>
+    <span class="iconify p-1-x" data-icon="el:volume-up"></span>
+    <input class="slider" type="range" />
+  </div>
+                </script></code>
+                  </pre>
+              </div>
             </div>
           </section>
         </div>

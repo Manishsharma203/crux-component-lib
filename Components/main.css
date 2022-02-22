@@ -14,6 +14,7 @@
 @import './alerts.css';
 @import './utilities.css';
 @import './layout.css';
+@import './slider.css';
 
 :root {
   font-size: 100%;
