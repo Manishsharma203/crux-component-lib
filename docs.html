@@ -629,6 +629,13 @@ function alertDismiss(){
               <span class="color-secondary">badge-error</span>,
               <span class="color-secondary">badge-info</span>,
               <span class="color-secondary">badge-success</span>.
+              <p>
+                For showing badges on avatars use classes
+                <span class="color-secondary">badge-avatar-top</span> in
+                addition to other classes. Further for showing online status on
+                the avatars use
+                <span class="color-secondary">badge-avatar-online</span>.
+              </p>
             </div>
             <div class="grid-col">
               <div class="col-6 border-secondary p-4">
@@ -664,6 +671,42 @@ function alertDismiss(){
                     >
                   </button>
                 </div>
+                <br />
+                <div>
+                  <div>
+                    <div class="relative block-inline">
+                      <img
+                        class="avatar avatar-round avatar-md"
+                        src="https://picsum.photos/200"
+                        alt="avatar"
+                      />
+                      <span
+                        class="badge badge-error badge-round badge-avatar-top"
+                        >8</span
+                      >
+                    </div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="relative block-inline">
+                      <img
+                        class="avatar avatar-round avatar-md"
+                        src="https://picsum.photos/200"
+                        alt="avatar"
+                      />
+                      <span class="badge-avatar-online"></span>
+                    </div>
+                  </div>
+                  <br />
+                  <div>
+                    <div class="relative block-inline">
+                      <span class="iconify font-30" data-icon="bxs:bell"></span>
+                      <span class="badge badge-error badge-round badge-top"
+                        >5</span
+                      >
+                    </div>
+                  </div>
+                </div>
                 <pre class="pre-code">
                   <code class="language-html" data-prismjs-copy="Copy the snippet!"><script type="text/plain">
 <div>
@@ -697,6 +740,39 @@ function alertDismiss(){
       >99+</span
     >
   </button>
+  <div>
+    <div class="relative block-inline">
+      <img
+        class="avatar avatar-round avatar-md"
+        src="https://picsum.photos/200"
+        alt="avatar"
+      />
+      <span
+        class="badge badge-error badge-round badge-avatar-top"
+        >8</span
+      >
+    </div>
+  </div>
+  <br />
+  <div>
+    <div class="relative block-inline">
+      <img
+        class="avatar avatar-round avatar-md"
+        src="https://picsum.photos/200"
+        alt="avatar"
+      />
+      <span class="badge-avatar-online"></span>
+    </div>
+  </div>
+  <br />
+  <div>
+    <div class="relative block-inline">
+      <span class="iconify font-30" data-icon="bxs:bell"></span>
+      <span class="badge badge-error badge-round badge-top"
+        >5</span
+      >
+    </div>
+  </div>
 </div>
                   </script></code></pre>
               </div>

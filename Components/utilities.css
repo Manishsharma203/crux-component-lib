@@ -167,6 +167,9 @@
 .relative {
   position: relative;
 }
+.block-inline{
+  display: inline-block;
+}
 .border-secondary {
   border: 1px solid var(--disable);
 }

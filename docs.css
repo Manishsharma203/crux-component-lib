@@ -75,6 +75,9 @@ a {
 .ml-auto{
   margin-left: auto;
 }
+.font-30{
+  font-size: 30px;
+}
 #themeToggle {
   font-size: 1.5rem;
 }
