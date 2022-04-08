@@ -14,6 +14,6 @@ Build UI Faster and Cleaner.
 
 - Copy-paste the stylesheet in the head tag before all other stylesheets to load the CSS.
 
- ```<link rel="stylesheet" href="./Components/main.css" />```
+ ```<link rel="stylesheet" href="https://cruxui-lib.netlify.app/Components/main.css" />```
 
 - Use the class names directly from the documentation.
